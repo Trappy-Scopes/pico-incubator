@@ -2,78 +2,135 @@
 
 Resources for in-house cell incubator controller based on Raspberry Pi Pico W.
 
-
-
-Programming Time: 2 hours
-
-Debugging Time: 2 hours
-
 ---
 
 Incubator Controller manages the following things:
 
-1. Temperature and Humidity Monitor —  Sampling Rate: 1 Sample/min
+1. Temperature and Humidity Monitor —  Sampling Rate: 1 Sample/min : Maintains averages per hour.
 2. Syncronisation of date and time using Wifi— Sync Rate: 1 Sample / 15 mins
    + Server:  "http://worldtimeapi.org/api/timezone/Europe/Lisbon"
 3. Light Controls: Fix R, G, B intensity and perform a sequence routine (day and night cycles)
 4. Actuation of tube-revolver using relay module.
+5. Power backup using 5V power rails.
 
 ---
 
 Optional features:
 
 1. Manual controls using Buttons and Potentiometers — buzzer based feedback.
-2. Power backup using 5V power rails.
 3. Fire safety mechanism: Read presence of Carbon-based gases and sound an alarm if a threat is detected.
 
 
 
-## Control Flows
+## File Structure
+
+```mermaid
+graph LR
+	root("/") --base--> pico-firmware
+	root --config & id--> pinassignments.py -.- id.py -.- config.py
+	root --utility--> action.py -.- averager.py
+	root --sensors-actuators--> tempandhumidity.py -.- lights.py -.- lcd.py
+	root --state--> circadium.config
+```
+
+
+
+## List of Timers
+
+1. `dt_sync_tim` : Date-time synchronisation of Real Time Clock (RTC).
+2. `buzzer_safety_tim` : Turns off the buzzer every 5 minutes to protect against accidental crashes while the buzzer is on.
+3. `sensor_act_timer` : 
+   1. `tanh_tim` : Samples the temperature and humidity at regular intervals.
+   2. `lcd_update1_tim`:  Pushes the next update on the LCD.
+
+4. `circadium_scheduler`:  Toggles the ligthts based on circadium rhythm.
+
+
+
+## List of Actions
+
+1. Switch-1 toggles relay.
+ 2. Switch-2 toggles lights.
+
+## List of External Peripherals
+
+1. UA7805C 5V 1.5A Linear Voltage Regulator connected to 9V independent powersupply.
+2. Generic Passive Buzzer
+3. Generic One channel Relay Switch
+4. 2 Buttons/Switches
+5. DFRobot DH22 Temperature and Humidity Sensor
+6. 21 Neopixel RGB LEDs
+7. Waveshare 0.96" color LCD with ST7735S driver: https://www.waveshare.com/wiki/Pico-LCD-0.96
+
+## Control Flow
 
 1. Main Routine
 
 ```mermaid
 graph LR
-	start((Start))-->lights("light_seq_updator()")--> th("read_t_and_h()")--loop_back-->start
+	start((Start)) --> core0[[on core 0]] --> set-resources --> set-actions --> set-timers --> Free-REPL  
+	set-resources --> core1[[on core 1]] --> set-socket --> set-server --> process-requests
+	process-requests -.poll.-> process-requests
 ```
 
-2. Recurring Callbacks for date and time sync
+2. Set-Temperature and Humidity Averagers
 
 ```mermaid
 graph LR
-	RTim1((Recurring-Timer<br>every 1 min)) --> ureq("urequest(Clock_server)") --> parse --> urtc("update_rtc()") --> stop((stop))
+	PT((Periodic<br>Timer)) --> read-sensor --push--> avg["Averager(avg)"] --> read("avg.read()")
+	read -.push.-> update-display
+	read -.logs.-> save-to-log-file
 ```
 
-```python
-dt_sync_timer.init()
-
-def dt_sync_callback():
-  dt_sync_flag = True
-  
-def dt_sync():
-  
-```
-
-
-
-3. Interrupt Routine for tube-revolver:
+3. Recurring Callbacks for date and time sync
 
 ```mermaid
 graph LR
-	Button2((On-button-press)) --> ISR --> debouce --> toggle-relay("toggle-relay-state<br>revolver on-off switch")
+	RTim1((Periodic<br>Timer)) --> ureq("urequest(clock_server)") --parse--> urtc("update_rtc()")
 ```
 
-```python
-def isr_button2():
-  sleep(butt_debtime)
-  if button2.on():
-    relay_toggle_flag = True
-  		  
+4. Interrupt Routine with Actions (Switch 1 and Switch 2):
+
+```mermaid
+graph LR
+	Button2((On-button-press)) --> ISR --debouce--> toggle-relay("toggle-relay-state<br>revolver toggle on-off<br>lights toggle on-off")
+```
+
+5. Fire Alarm Triggers [disconnected as of now]
+
++ The Gas Sensor must be warmed up for 5-10 minutes before it can be read.
++ If the Gas Sensor has remained unused for a long time, it must be preheated for 24 hours atleast.
++ The sensor consumes about ~800 mW of power.
+
+```mermaid
+graph LR
+	start(("Periodic<br>Timer")) --> Gas{Gas Sensor} --HIGH--> Send-Alerts
+	Send-Alerts --> buzz("buzz(100)")
+	Gas --LOW--> start
 ```
 
 
 
+6. Power Rail Detection
 
+   ​	No clue as of now on how to do it.
+
+   ```mermaid
+   graph LR
+   	Detect{Detect<br>Power<br>Rail} --> b_on("buzzer.on()") --> sleep("sleep(3)") --> b_off("buzzer.off()")
+   	
+   	
+   ```
+
+   7. Watchdog timer to correct for crashes
+
+      ```python
+      from machine import WDT
+      wdt = WDT(timeout=2000)  # enable it with a timeout of 2s
+      wdt.feed()
+      ```
+
+On rp2040 devices, the maximum timeout is 8388 ms.
 
 ## Code
 
@@ -160,6 +217,44 @@ def main():
 
 ## Illumination Scheduler
 
+### Day-Night Cycles
+
+The actuation of day night cycles requires the complete description of the following entities:
+
+1. (day_len_hours, night_len_hours, start_time, day_start)
+2. (day_start, night_start)
+
+```python
+class CircadiumScheduler:
+  	def __init__(self):
+      self.day_start   = "07:00"
+			self.night_start = "20:00"
+			self.cycles      = None
+      
+    def set_day_conditions():
+      pass
+    def set_night_conditions():
+      pass
+      
+    
+    def time_based(day_start, night_start, cycles=None):
+      """
+      Input hours::minutes in 24 hour format.
+      cycles = None : Run cycle forever.
+      """
+      if is_valid_time(day_start) and is_valid_time(night_start):
+      		self.day_start   = day_start
+					self.night_start = night_start
+					self.cycles      = cycles
+          
+      with open(circadium.config) as file:
+        file.write(f"{day_start}\n{night_start}\n{cycles}\n")
+        
+      self.set_timers(
+```
+
+
+
 ```python
 class IlluminationScheduler:
   
@@ -203,36 +298,4 @@ class ScheduleParser:
 ```
 
 
-
-## Buzzer
-
-```python
-def buzz(count=1):
-  global buzzer
-	for _ in range(3):
-      buzzer.on()
-      sleep(1)
-      buzzer.off()
-      sleep(1)
-```
-
-
-
-## Fire Alarm
-
-```mermaid
-graph LR
-	start(("On-shot-timer<br>every 1 min")) --> Gas{Gas Sensor} --HIGH--> Send-Emails
-	Send-Emails --> buzz("buzz(100)")
-	Gas --LOW--> start
-```
-
-## Power Rail Actuation
-
-```mermaid
-graph LR
-	Detect{Detect<br>Power<br>Rail} --> b_on("buzzer.on()") --> sleep("sleep(3)") --> b_off("buzzer.off()")
-	
-	
-```
 
