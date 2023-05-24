@@ -2,7 +2,8 @@ from machine import Pin,SPI,PWM
 import framebuf
 import time
 
-#pins__ = {"din":,"clk","cs","dc","rst", "bl	"} 
+#bl has to be a PWM channel
+#pins__ = {"din":11,"clk":10,"cs":9,"dc":8,"rst":12, "bl:13	"
 
 #color is BGR
 RED = 0x00F8
@@ -11,7 +12,16 @@ GREEN = 0xE007
 BLUE = 0x1F00
 WHITE = 0xFFFF
 BLACK = 0x0000
+
 class LCD_0inch96(framebuf.FrameBuffer):
+    
+    RED = 0x00F8
+    YELLOW = 0x00F8
+    GREEN = 0xE007
+    BLUE = 0x1F00
+    WHITE = 0xFFFF
+    BLACK = 0x0000
+    
     def __init__(self):
     
         self.width = 160
@@ -21,7 +31,7 @@ class LCD_0inch96(framebuf.FrameBuffer):
         
         self.cs = Pin(9,Pin.OUT)
         self.rst = Pin(12,Pin.OUT)
-#        self.bl = Pin(13,Pin.OUT)
+#       self.bl = Pin(13,Pin.OUT)
         self.cs(1)
         # pwm = PWM(Pin(13))#BL
         # pwm.freq(1000)        
@@ -55,7 +65,7 @@ class LCD_0inch96(framebuf.FrameBuffer):
         self.spi.write(bytearray([buf]))
         self.cs(1)
 
-    def backlight(self,value):#value:  min:0  max:1000
+    def backlight(self, value):#value:  min:0  max:1000
         pwm = PWM(Pin(13))#BL
         pwm.freq(1000)
         if value>=1000:
@@ -253,41 +263,37 @@ class LCD_0inch96(framebuf.FrameBuffer):
             return f"{(maxchars-len_)*" "}{text}"
         
 
-def lcdintro(lcd):
-    
-    lcd.bg(RED)
-    time.sleep(1)
-    
-    lcd.bg(GREEN)
-    time.sleep(1)
-    
-    lcd.bg(BLUE)
-    time.sleep(1)
-    
-    lcd.bg(WHITE)
-    time.sleep(1)
-    
-    lcd.bg(BLACK)
-    time.sleep(1)
+    def intro_seq(self):
+        
+        self.bg(RED)
+        time.sleep(1)
+        
+        self.bg(GREEN)
+        time.sleep(1)
+        
+        self.bg(BLUE)
+        time.sleep(1)
+        
+        self.bg(WHITE)
+        time.sleep(1)
+        
+        self.bg(BLACK)
+        time.sleep(1)
     
 
 if __name__=='__main__':
     lcd = LCD_0inch96()
-    lcd.fill(BLACK)
-    #lcd.l1("Yatharth")
-    #lcd.l2("Yatharth")
-    #lcd.l3("Yatharth")
-    
+    lcd.fill(BLACK)    
     text = """
 \   ^__^
  \ (oo)\_______
    (__)\       )\/\
         ||----w |
         ||     ||"""
-    #lcd.multiline(text)
+    lcd.multiline(text)
     time.sleep(1)
     lcd.display()
     for i in range(1):
-        lcdintro(lcd)
+        lcd.intro_seq(lcd)
     
     

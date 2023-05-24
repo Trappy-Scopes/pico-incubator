@@ -2,8 +2,9 @@
 
 
 from machine import Pin
-import pinassignments
 import utime
+
+import pinassignments
 
 
 class Action:
@@ -11,17 +12,17 @@ class Action:
         self.callback = callback
         self.debounce_ms = debounce_ms
         self.pin = pin
+        self.block = False
         
-        self._blocked = False
         self._next_call = utime.ticks_ms() + self.debounce_ms
 
-        pin.irq(trigger=trigger, handler=self.debounce_handler)
+        self.pin.irq(trigger=trigger, handler=self.debounce_handler)
 
     def __call__(self, pin):
         self.callback(pin)
 
     def debounce_handler(self, pin):
-        if utime.ticks_ms() > self._next_call:
+        if utime.ticks_ms() > self._next_call and not block:
             self._next_call = utime.ticks_ms() + self.debounce_ms
             self.__call__(pin)
         #else:

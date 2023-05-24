@@ -1,10 +1,27 @@
 import dht
 from machine import Pin
-import utime
-import pinassignments
 
+
+# Depreciate
 def get_temp_humidy():
     print(pinassignments.th_sensor)
     d = dht.DHT22(Pin(pinassignments.th_sensor))
-    d.measure()
-    return {"temp": d.temperature(), "humidity":d.humidity()}
+    
+
+
+class TandHSensor:
+    
+    def __init__(pin, type_):
+        self.pin = pin
+        self.offset = {"temp": 0, "humidity":0}
+        
+        if type_.lower() == "dh11":
+            self.sensor = dht.DHT11(Pin(self.pin))
+        elif type_.lower() == "dh22":
+            self.sensor = dht.DHT22(Pin(self.pin))
+            
+    def read(self): #Add Exception handling
+        self.sensor.measure()
+        return {"temp"     : d.temperature() + self.offset["temp"],
+                "humidity" :d.humidity()  + self.offset["humidity"]
+                }

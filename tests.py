@@ -22,5 +22,3 @@ def buzzer():
         sleep(0.05)
         
     buzzer.deinit()
-    
-    

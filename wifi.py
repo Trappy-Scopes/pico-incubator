@@ -2,6 +2,7 @@ import time
 import network
 from machine import Pin
 import secrets
+import ubinascii
 
 # TODO
 #1. Understand sockets
@@ -28,9 +29,10 @@ class Wifi:
         """
         self.wlan = network.WLAN(network.STA_IF)
         self.wlan.active(True)
+        self.connected = False
         
         # Device Info
-        self.mac = ubinascii.hexlify(self.WLAN().config('mac'),':').decode()
+        self.mac = ubinascii.hexlify(self.wlan.config('mac'),':').decode()
 
         if secrets != None:
             self.connect(secrets)
@@ -54,7 +56,8 @@ class Wifi:
 
         # Handle connection error
         if self.wlan.status() != 3:
-            raise RuntimeError('Wifinetwork connection failed!')
+            print('Wifinetwork connection failed!')
+            self.connected = False
         else:
             s = 3
             led = Pin("LED", Pin.OUT)
@@ -72,6 +75,7 @@ class Wifi:
             self.time_on_connected = time.time()
             self.ip = status[0]
             self.status = status
+            self.connected = True
 
     #3
     def disconnect(self):

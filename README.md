@@ -299,3 +299,27 @@ class ScheduleParser:
 
 
 
+### LED Matrix Current Requirement Analysis
+
++ Source: https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels
++ LM7805C Linear Voltage Regulator: 
+
++  Adding a 300 to 500 Ohm resistor between your microcontroller's data pin and the data input on the first NeoPixel can help prevent voltage spikes that might otherwise damage your first pixel. Please add one between your micro and NeoPixels!
+
++ Before connecting a NeoPixel strip to ANY source of power, a large capacitor (500–1000** **µ****F at 6.3 Volts or higher) across the + and – terminals provides a small power reservoir for abrupt changes in brightness that the power source might not otherwise handle — a common source of NeoPixel “glitching.”
+
++ To estimate power supply needs, multiply the number of pixels by 20, then divide the result by 1,000 for the “rule of thumb” power supply rating in Amps. Or use 60 (instead of 20) if you want to guarantee an absolute margin of safety for all situations. For example:
+
+  60 NeoPixels × 20 mA ÷ 1,000 = 1.2 Amps minimum
+  60 NeoPixels × 60 mA ÷ 1,000 = 3.6 Amps maximum
+
++ **For Our Case**: 21 LEDs:
+
+  + 21 × 20mA / 1000  = 410/1000 = 0.41 A
+  + 21 × 60mA / 1000 = 1260/1000 = 1.26A
+
++ Rating for LM7805C is 5A ad 1.5A maximum. Therefore, it is being used **around** its full capacity. The Regulator has thermal protection shutdown.
+
++ **How to detect thermal shutdowns? : Use a Photosensor module with an IRQ on a minimum threshold raising an error.** For this to be reliable, the box needs to be closed-shut with magnets. Port for Potentiometer is free and is connected to an Analog Read Pin (ADC).
+
++ 
