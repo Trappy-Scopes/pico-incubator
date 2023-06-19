@@ -37,9 +37,9 @@ class Wifi:
         if secrets != None:
             self.connect(secrets)
             
-    def status(self):
-        mac = ubinascii.hexlify(self.WLAN().config('mac'),':').decode()
-        print(mac)
+    def info(self):
+        self.mac = ubinascii.hexlify(self.WLAN().config('mac'),':').decode()
+        return f"mac: {mac} ip: {self.ip}"
 
     #2   
     def connect(self, secrets):
@@ -70,12 +70,13 @@ class Wifi:
                 time.sleep(0.5)
 
             status = self.wlan.ifconfig()
-            print( 'Connected to ' + secrets.SSID + '. ' + 'Device IP: ' + status[0])
+            
 
             self.time_on_connected = time.time()
             self.ip = status[0]
             self.status = status
             self.connected = True
+            return str( 'Connected to ' + secrets.SSID + '. ' + 'Device IP: ' + status[0])
             
         if not self.connected:
             self.wlan.connect(secrets.SSID1, secrets.SSID1_PASSWORD)
@@ -105,12 +106,12 @@ class Wifi:
                     time.sleep(0.5)
 
                 status = self.wlan.ifconfig()
-                print( 'Connected to ' + secrets.SSID1 + '. ' + 'Device IP: ' + status[0])
 
                 self.time_on_connected = time.time()
                 self.ip = status[0]
                 self.status = status
                 self.connected = True
+                return str( 'Connected to ' + secrets.SSID1 + '. ' + 'Device IP: ' + status[0])
 
     #3
     def disconnect(self):
