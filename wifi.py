@@ -43,7 +43,7 @@ class Wifi:
 
     #2   
     def connect(self, secrets):
-        self.wlan.connect(secrets.SSID, secrets.PASSWORD)
+        self.wlan.connect(secrets.SSID, secrets.SSID_PASSWORD)
 
         # Wait for connect or fail
         max_wait = 10
@@ -76,6 +76,41 @@ class Wifi:
             self.ip = status[0]
             self.status = status
             self.connected = True
+            
+        if not self.connected:
+            self.wlan.connect(secrets.SSID1, secrets.SSID1_PASSWORD)
+
+            # Wait for connect or fail
+            max_wait = 10
+            while max_wait > 0:
+                if self.wlan.status() < 0 or self.wlan.status() >= 3:
+                    break
+                max_wait -= 1
+                print('waiting for connection...')
+                time.sleep(1)
+
+            # Handle connection error
+            if self.wlan.status() != 3:
+                print('Wifinetwork connection failed!')
+                self.connected = False
+            else:
+                s = 3
+                led = Pin("LED", Pin.OUT)
+                while s > 0:
+                    s -= 1
+
+                    led.value(1)
+                    time.sleep(0.5)
+                    led.value(0)
+                    time.sleep(0.5)
+
+                status = self.wlan.ifconfig()
+                print( 'Connected to ' + secrets.SSID1 + '. ' + 'Device IP: ' + status[0])
+
+                self.time_on_connected = time.time()
+                self.ip = status[0]
+                self.status = status
+                self.connected = True
 
     #3
     def disconnect(self):

@@ -1,51 +1,62 @@
 from machine import RTC
+import os
 
 class Logger:
     
     channels = ["out", "in", "err"]
+
+    log = str()
+    rtc = RTC()
+    files = {key:None for key in channels}
+    debug = True
+    lcd_ = None
+    __lcd_i__ = 1
     
-    
-    def __init__(cls):
+
+    for file in channels:
+        name = f"{file}.txt"
         
-        cls.log = str()
-        cls.rtc = RTC()
-        cls.files = {}
-        cls.debug = True
-        cls.lcd_ = None
-        cls.__lcd_i__ = 1
+        # Check if file exists
+        if name not in os.listdir():
+            with open(name, "w") as f:
+                pass 
+       
+        # Mount file
+        files[file] = open(name, "a")
         
-        for file in Logger.channels:
-            cls.files[file] = open(f"{file}.txt", "r+a")
         
-    def __get_item__(cls, key):
-        return cls.files[key]
-    
-    def __call__(cls, key, log):
-        cls.log = f"{cls.rtc.datetime()}, {log}"
-        cls.files[key].write(log)
-        cls.files[key].flush()
+        files[file].write(f"{file}\n")
+        files[file].flush()
         
-        if cls.debug:
-            print(cls.log)
+    #def __get_item__(key):
+    #   return Logger.files[key]
     
-    def __del__(cls):
-        for file in self.files:
-            cls.files[file].close()
+    def write(key, log):
+        Logger.log = f"{key}, {Logger.rtc.datetime()}, {log}\n"
+        Logger.files[key].write(Logger.log)
+        Logger.files[key].flush()
+        
+        if Logger.debug:
+            print(Logger.log)
     
-    def dump(cls, key):
-        return cls.files[key].read()
+    def __del__():
+        for file in Logger.files:
+            Logger.files[file].close()
     
-    def lcd(cls, text):
-        if display:
-            if cls.__lcd_i__ % 3 == 1:
-                self.display.top(f"{cls.__lcd_i__}. {text}")
-                cls.__lcd_i__ += 1
+    #def dump(key):
+    #    return Logger.files[key].read()
+    
+    def lcd(text):
+        if Logger.display:
+            if Logger.__lcd_i__ % 3 == 1:
+                Logger.display.top(f"{Logger.__lcd_i__}. {text}")
+                Logger.__lcd_i__ += 1
                 return
-            elif cls.__lcd_i__ % 3 == 2:
-                self.display.middle(f"{cls.__lcd_i__}. {text}")
-                cls.__lcd_i__ += 1
+            elif Logger.__lcd_i__ % 3 == 2:
+                Logger.display.middle(f"{Logger.__lcd_i__}. {text}")
+                Logger.__lcd_i__ += 1
                 return
             else:
-                self.display.middle(f"{cls.__lcd_i__}. {text}")
-                cls.__lcd_i__ += 1
+                Logger.display.middle(f"{Logger.__lcd_i__}. {text}")
+                Logger.__lcd_i__ += 1
                 return

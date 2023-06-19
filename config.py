@@ -1,4 +1,4 @@
 tandh_sample_period_s = 60
 fire_check_period_s = 60 * 5
 dt_sync_period_s = 60 * 15
-cs_callback_s = 30
+cs_callback_s = 15

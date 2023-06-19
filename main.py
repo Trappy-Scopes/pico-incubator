@@ -8,10 +8,12 @@ from action import Action
 from tempandhumidity import get_temp_humidy, TandHSensor
 from lcd import LCD_0inch96
 from circadiumscheduler import CircadiumScheduler
-
+from buzzer import Buzzer
+from averager import Averager
+from logger import Logger as Log
 
 from wifi import Wifi
-from neopixel import Neopixel
+from neopixel import NeoPixel
 
 
 import secrets
@@ -20,7 +22,7 @@ import config
 
 # Resources ---------------------------------------------------------
 relay = Pin(pinassignments.relay, Pin.OUT)
-buzzer = Pin(pinassignments.buzzer, Pin.OUT)
+buzzer = Buzzer(pinassignments.buzzer, Pin.OUT)
 buzzer.off()
 sw1 = Pin(pinassignments.sw1, Pin.IN)
 sw2 = Pin(pinassignments.sw2, Pin.IN)
@@ -93,7 +95,7 @@ dt_sync_tim = Timer(period=1000*config.dt_sync_period_s, mode=Timer.PERIODIC, ca
 
 
 # Circadium Rhythm Scheduler ------------------------------------------
-scheduler = CircadiumScheduler()
+scheduler = CircadiumScheduler(lightmatrix, buzzer)
 scheduler.rtc.datetime(rtc.datetime())
 scheduler.set_from_config()
 scheduler.set_timers(mode="short")
@@ -128,7 +130,3 @@ tanh_tim = Timer(period=1000*config.tandh_sample_period_s, mode=Timer.PERIODIC, 
 lcd_roll = []
 def lcd_update(timer):
     pass
-
-
-
-

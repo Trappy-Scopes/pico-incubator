@@ -22,7 +22,7 @@ class Action:
         self.callback(pin)
 
     def debounce_handler(self, pin):
-        if utime.ticks_ms() > self._next_call and not block:
+        if utime.ticks_ms() > self._next_call and not self.block:
             self._next_call = utime.ticks_ms() + self.debounce_ms
             self.__call__(pin)
         #else:

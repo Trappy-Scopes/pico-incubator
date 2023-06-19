@@ -1,6 +1,8 @@
 import dht
 from machine import Pin
 
+import pinassignments
+
 
 # Depreciate
 def get_temp_humidy():
