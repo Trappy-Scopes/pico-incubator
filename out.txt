@@ -210,3 +210,119 @@ out, (2023, 6, 19, 0, 20, 53, 53, 0), Set Circadium Scheduler: [8, 0], [20, 0], 
 out, (2023, 6, 19, 0, 20, 53, 53, 0), Phase detection: night
 out, (2023, 6, 19, 0, 20, 53, 58, 0), Transitioning to night light conditions: [0, 0, 0]
 out, (2023, 6, 19, 0, 20, 53, 58, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out
+out, (2023, 6, 20, 1, 16, 4, 58, 0), 1
+out
+out, (2023, 6, 20, 1, 16, 13, 24, 0), Machine Reset: 1
+out, (2023, 6, 20, 1, 16, 13, 32, 0), Local time before synchronization：(2023, 6, 20, 1, 16, 13, 32, 0)
+out, (2023, 6, 20, 1, 16, 13, 34, 0), RTC synchronized by NTP server.
+out, (2023, 6, 20, 1, 16, 13, 34, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 13, 35, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 13, 35, 0), Phase detection: night
+out, (2023, 6, 20, 1, 16, 13, 39, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2023, 6, 20, 1, 16, 13, 39, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 13, 39, 0), Wifi is connected: {wifi.info()}.
+out, (2023, 6, 20, 1, 16, 13, 40, 0), T&H sensor could not be accessed. Would not log sensor data.
+out, (2023, 6, 20, 1, 16, 13, 40, 0), Processor thread 1 was started: None
+out, (2023, 6, 20, 1, 16, 13, 42, 0), Device was connected to a PC terminal.
+out, (2023, 6, 20, 1, 16, 13, 43, 0), Setup is finished.
+out, (2023, 6, 20, 1, 16, 14, 1, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 14, 1, 0), Phase detection: night
+out, (2023, 6, 20, 1, 16, 14, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2023, 6, 20, 1, 16, 14, 7, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 14, 7, 0), Phase detection: night
+out, (2023, 6, 20, 1, 16, 14, 12, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2023, 6, 20, 1, 16, 14, 36, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2023, 6, 20, 1, 16, 15, 50, 0), Machine Reset: 1
+out, (2023, 6, 20, 1, 16, 15, 59, 0), Local time before synchronization：(2023, 6, 20, 1, 16, 15, 59, 0)
+out, (2023, 6, 20, 1, 16, 16, 1, 0), RTC synchronized by NTP server.
+out, (2023, 6, 20, 1, 16, 16, 1, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 16, 2, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 16, 2, 0), Phase detection: night
+out, (2023, 6, 20, 1, 16, 16, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2023, 6, 20, 1, 16, 16, 7, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 16, 7, 0), Wifi is connected: {wifi.info()}.
+out, (2023, 6, 20, 1, 16, 16, 7, 0), T&H sensor could not be accessed. Would not log sensor data.
+out, (2023, 6, 20, 1, 16, 16, 7, 0), Processor thread 1 was started: None
+out, (2023, 6, 20, 1, 16, 16, 10, 0), Device was connected to a PC terminal.
+out, (2023, 6, 20, 1, 16, 16, 10, 0), Setup is finished.
+out
+out, (2023, 6, 20, 1, 16, 16, 32, 0), Machine Reset: 1
+out, (2023, 6, 20, 1, 16, 16, 40, 0), Local time before synchronization：(2023, 6, 20, 1, 16, 16, 40, 0)
+out, (2023, 6, 20, 1, 16, 16, 42, 0), RTC synchronized by NTP server.
+out, (2023, 6, 20, 1, 16, 16, 42, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 16, 43, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 16, 43, 0), Phase detection: day
+out, (2023, 6, 20, 1, 16, 16, 47, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2023, 6, 20, 1, 16, 16, 47, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 16, 47, 0), Wifi is connected: {wifi.info()}.
+out, (2023, 6, 20, 1, 16, 16, 48, 0), T&H sensor could not be accessed. Would not log sensor data.
+out, (2023, 6, 20, 1, 16, 16, 48, 0), Processor thread 1 was started: None
+out, (2023, 6, 20, 1, 16, 16, 51, 0), Device was connected to a PC terminal.
+out, (2023, 6, 20, 1, 16, 16, 51, 0), Setup is finished.
+out, (2023, 6, 20, 1, 20, 17, 4, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 20, 17, 4, 0), Phase detection: night
+out, (2023, 6, 20, 1, 20, 17, 9, 0), Transitioning to night light conditions: [0, 0, 0]
+out
+out
+out, (2023, 6, 20, 1, 16, 18, 14, 0), Machine Reset: 1
+out, (2023, 6, 20, 1, 16, 18, 21, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 18, 22, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 18, 22, 0), Phase detection: day
+out, (2023, 6, 20, 1, 16, 18, 26, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2023, 6, 20, 1, 16, 18, 27, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 18, 27, 0), Wifi could not be connected.
+out, (2023, 6, 20, 1, 16, 18, 27, 0), T&H sensor could not be accessed. Would not log sensor data.
+out, (2023, 6, 20, 1, 16, 18, 27, 0), Processor thread 1 was started: None
+out, (2023, 6, 20, 1, 16, 18, 30, 0), Device was connected to a PC terminal.
+out, (2023, 6, 20, 1, 16, 18, 30, 0), Setup is finished.
+out
+out, (2023, 6, 20, 1, 16, 18, 51, 0), Machine Reset: 1
+out, (2023, 6, 20, 1, 16, 19, 13, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 19, 15, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 19, 15, 0), Phase detection: day
+out, (2023, 6, 20, 1, 16, 19, 19, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2023, 6, 20, 1, 16, 19, 19, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 19, 20, 0), Wifi could not be connected.
+out, (2023, 6, 20, 1, 16, 19, 20, 0), T&H sensor could not be accessed. Would not log sensor data.
+out, (2023, 6, 20, 1, 16, 19, 20, 0), Processor thread 1 was started: None
+out, (2023, 6, 20, 1, 16, 19, 23, 0), Device was connected to a PC terminal.
+out, (2023, 6, 20, 1, 16, 19, 23, 0), Setup is finished.
+out
+out, (2023, 6, 20, 1, 16, 23, 13, 0), Machine Reset: 1
+out, (2023, 6, 20, 1, 16, 23, 36, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 23, 37, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 23, 37, 0), Phase detection: day
+out, (2023, 6, 20, 1, 16, 23, 41, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2023, 6, 20, 1, 16, 23, 41, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 23, 41, 0), Wifi could not be connected.
+out, (2023, 6, 20, 1, 16, 23, 42, 0), T&H sensor could not be accessed. Would not log sensor data.
+out, (2023, 6, 20, 1, 16, 23, 42, 0), Processor thread 1 was started: None
+out, (2023, 6, 20, 1, 16, 26, 22, 0), Unable to connect to Wifi. Auto-Reseting device.
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 3
+out, (2021, 1, 1, 4, 0, 0, 12, 0), Local time before synchronization：(2021, 1, 1, 4, 0, 0, 12, 0)
+out, (2023, 6, 20, 1, 16, 26, 35, 0), RTC synchronized by NTP server.
+out, (2023, 6, 20, 1, 16, 26, 35, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 26, 36, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 26, 36, 0), Phase detection: day
+out, (2023, 6, 20, 1, 16, 26, 40, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2023, 6, 20, 1, 16, 26, 40, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 26, 40, 0), Wifi is connected: {wifi.info()}.
+out, (2023, 6, 20, 1, 16, 26, 41, 0), T&H sensor could not be accessed. Would not log sensor data.
+out, (2023, 6, 20, 1, 16, 26, 41, 0), Processor thread 1 was started: None
+out, (2023, 6, 20, 1, 16, 41, 34, 0), Local time before synchronization：(2023, 6, 20, 1, 16, 41, 34, 0)
+out, (2023, 6, 20, 1, 16, 56, 34, 0), Local time before synchronization：(2023, 6, 20, 1, 16, 56, 34, 0)
+out
+out, (2023, 6, 20, 1, 16, 58, 4, 0), Machine Reset: 3
+out, (2023, 6, 20, 1, 16, 58, 31, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 58, 32, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2023, 6, 20, 1, 16, 58, 32, 0), Phase detection: day
+out, (2023, 6, 20, 1, 16, 58, 36, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2023, 6, 20, 1, 16, 58, 36, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2023, 6, 20, 1, 16, 58, 37, 0), Wifi could not be connected.
+out, (2023, 6, 20, 1, 16, 58, 37, 0), T&H sensor could not be accessed. Would not log sensor data.
+out, (2023, 6, 20, 1, 16, 58, 37, 0), Processor thread 1 was started: None
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1

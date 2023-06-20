@@ -3,7 +3,6 @@ from time import sleep, ticks_ms
 import _thread
 import time
 import ntptime
-import pyb
 
 from action import Action
 from tempandhumidity import get_temp_humidy, TandHSensor
@@ -23,6 +22,9 @@ import config
 
 
 # Resources ---------------------------------------------------------    T0
+Log.write("out", f"Machine Reset: {machine.reset_cause()}")
+
+
 relay = Pin(pinassignments.relay, Pin.OUT)
 buzzer = Buzzer(pinassignments.buzzer, Pin.OUT)
 buzzer.off()
@@ -61,7 +63,7 @@ def toggle_lights(pin):
 # Clock synchronisation ----------------------------------------------    T2   ||  Timer 0
 def dt_sync_callback(timer):
     if wifi.connected:
-        Log.write("Local time before synchronization：%s" %str(rtc.datetime()))
+        Log.write("out", "Local time before synchronization：%s" %str(rtc.datetime()))
         ntptime.settime()
         now = list(rtc.datetime())
         now[4] = (now[4] + 1) %24 #UTC+1 Timezone correction
@@ -89,7 +91,7 @@ buzzer_safety_tim = Timer(period=1000*5*60, mode=Timer.PERIODIC, \
 
 # Wifi status
 if wifi.connected:
-    Log.write("out", "Wifi is connected: {wifi.info()}.")
+    Log.write("out", f"Wifi is connected: {wifi.info()}.")
 else:
    Log.write("out", "Wifi could not be connected.") 
 
@@ -116,14 +118,22 @@ global processor1_stop
 processor1_stop = False
 
 def processor1():
-    global processor1_stop
+    global processor1_stop, buzzer
+    counter = 0
     while not processor1_stop:
         global wifi
         if not wifi.connected:
+            counter = counter+1
             import secrets
+            print(f"Connection counter: {counter}.")
             wifi.connect(secrets)
             if wifi.connected:
                 Log.write("out", f"On Processor 1, wifi connected: {wifi.info()}.")
+            else:
+                if counter == 5: # Reset Device - if counter exceeds 5.
+                    buzzer.buzz()
+                    Log.write("out", "Unable to connect to Wifi. Auto-Reseting device.")
+                    machine.reset()          
         else:
             time.sleep(1)
 processor2_thread = _thread.start_new_thread(processor1, ())
@@ -138,11 +148,12 @@ def lcd_update(timer):
 
 # Setup Finished ----------------------------------------------------    T8
 buzzer.buzz(count=3)
-if pyb.USB_VCP.isconnected():
-    Log.write("out", "Device was connected to a PC terminal.")
-else:
-    Log.write("out", "Device was connected to mains power.")
+# Check Connection
+#if True:
+#    Log.write("out", "Device was connected to a PC terminal.")
+#else:
+#    Log.write("out", "Device was connected to mains power.")
 
-Log.write("out", "Setup is finished.")
+#Log.write("out", "Setup is finished.")
 # -------------------------------------------------------------------
 

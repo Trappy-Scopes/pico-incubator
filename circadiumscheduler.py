@@ -191,9 +191,10 @@ class CircadiumScheduler:
         self.remaining_cycles = float(self.remaining_cycles) - 0.5
         
     def phase_detect(self, now):
-        
-        if self.__minute_diff__(now, self.day_start) >= 0 and \
-           self.__minute_diff__(now, self.night_start) <= 0:
+        print(self.__minute_diff__(now, self.day_start))
+        print(self.__minute_diff__(now, self.night_start))
+        if self.__minute_diff__(self.day_start, now) >= 0 and \
+           self.__minute_diff__(self.night_start, now) <= 0:
             return "day"
         else:
             return "night"
