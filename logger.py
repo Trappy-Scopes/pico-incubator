@@ -3,7 +3,7 @@ import os
 
 class Logger:
     
-    channels = ["out", "in", "err"]
+    channels = ["out", "in", "err", "tandh1"]
 
     log = str()
     rtc = RTC()

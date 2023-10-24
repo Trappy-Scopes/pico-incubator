@@ -1,7 +1,7 @@
 import dht
 from machine import Pin
 
-import pinassignments
+#import pinassignments
 
 
 # Depreciate
@@ -13,7 +13,7 @@ def get_temp_humidy():
 
 class TandHSensor:
     
-    def __init__(pin, type_):
+    def __init__(self, pin, type_):
         self.pin = pin
         self.offset = {"temp": 0, "humidity":0}
         
@@ -21,9 +21,10 @@ class TandHSensor:
             self.sensor = dht.DHT11(Pin(self.pin))
         elif type_.lower() == "dh22":
             self.sensor = dht.DHT22(Pin(self.pin))
+        print(self.sensor)
             
     def read(self): #Add Exception handling
-        self.sensor.measure()
-        return {"temp"     : d.temperature() + self.offset["temp"],
-                "humidity" :d.humidity()  + self.offset["humidity"]
+        d = self.sensor.measure()
+        return {"temp"     : self.sensor.temperature() + self.offset["temp"],
+                "humidity" :self.sensor.humidity()  + self.offset["humidity"]
                 }

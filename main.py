@@ -31,7 +31,8 @@ buzzer.off()
 sw1 = Pin(pinassignments.sw1, Pin.IN)
 sw2 = Pin(pinassignments.sw2, Pin.IN)
 led = Pin("LED", Pin.OUT)
-
+tandh1 = TandHSensor(pinassignments.th_sensor1, "dh11")
+tandh2 = TandHSensor(pinassignments.th_sensor2, "dh22")
 wifi = Wifi(secrets=secrets)
 rtc = RTC()
 
@@ -63,13 +64,13 @@ def toggle_lights(pin):
 # Clock synchronisation ----------------------------------------------    T2   ||  Timer 0
 def dt_sync_callback(timer):
     if wifi.connected:
-        Log.write("out", "Local time before synchronization：%s" %str(rtc.datetime()))
+        Log.write("err", "Local time before synchronization：%s" %str(rtc.datetime()))
         ntptime.settime()
         now = list(rtc.datetime())
         now[4] = (now[4] + 1) %24 #UTC+1 Timezone correction
         rtc.datetime(now)
         print("Local time after synchronization：%s" %str(rtc.datetime()))
-        Log.write("out", "RTC synchronized by NTP server.")
+        Log.write("err", "RTC synchronized by NTP server.")
 
 dt_sync_callback(True)
 dt_sync_tim = Timer(period=1000*config.dt_sync_period_s, mode=Timer.PERIODIC, callback=dt_sync_callback)
@@ -99,13 +100,15 @@ else:
 
 # Temp and humidity monitors ------------------------------------------     T5   ||   Timer 3
 try:
-    sample = get_temp_humidy()
+    sample = tandh1.read()
     temperature = Averager("temp", size=15, init=sample["temp"])
     humidity = Averager("humidity", size=15, init=sample["humidity"])
     def tandh_callback(timer):
-        sample = get_temp_humidy()
-        temperture.update(sample["temp"])
+        sample = tandh1.read()
+        print("TandH: ", sample)
+        temperature.update(sample["temp"])
         humidity.update(sample["humidity"])
+        Log.write("tandh1", sample)
     # Set Timer
     tanh_tim = Timer(period=1000*config.tandh_sample_period_s, mode=Timer.PERIODIC, \
                      callback=tandh_callback)
@@ -120,6 +123,8 @@ processor1_stop = False
 def processor1():
     global processor1_stop, buzzer
     counter = 0
+    not_counter = 0
+    max_not_counter = int(60 * 0.1)
     while not processor1_stop:
         global wifi
         if not wifi.connected:
@@ -127,8 +132,10 @@ def processor1():
             import secrets
             print(f"Connection counter: {counter}.")
             wifi.connect(secrets)
+            time.sleep(0.5)
             if wifi.connected:
                 Log.write("out", f"On Processor 1, wifi connected: {wifi.info()}.")
+                dt_sync_callback(True)            
             else:
                 if counter == 5: # Reset Device - if counter exceeds 5.
                     buzzer.buzz()
@@ -136,6 +143,7 @@ def processor1():
                     machine.reset()          
         else:
             time.sleep(1)
+                
 processor2_thread = _thread.start_new_thread(processor1, ())
 Log.write("out", f"Processor thread 1 was started: {processor2_thread}")
 # -------------------------------------------------------------------

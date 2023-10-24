@@ -3,6 +3,7 @@ import network
 from machine import Pin
 import secrets
 import ubinascii
+import urequests
 
 # TODO
 #1. Understand sockets
@@ -38,8 +39,9 @@ class Wifi:
             self.connect(secrets)
             
     def info(self):
-        self.mac = ubinascii.hexlify(self.WLAN().config('mac'),':').decode()
-        return f"mac: {mac} ip: {self.ip}"
+        #self.mac = ubinascii.hexlify(self.wlan.config('mac'),':').decode()
+        #return f"mac: {mac} ip: {self.ip}"
+        return None
 
     #2   
     def connect(self, secrets):
@@ -179,8 +181,13 @@ class Wifi:
                 print('connection closed')
 
     #6
-    def browse(self, url):
-        pass
+    def post(self, url, data=None):
+        if data:
+            response = urequests.post(url, headers=our_headers, data=data)
+        else:
+            response = urequests.post(url)
+        return response
+
 
 if __name__ == "__main__":
     wifi = Wifi(secrets)

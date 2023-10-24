@@ -31,3 +31,16 @@
         # Block if cycles are over
         if self.remining_cycles == 0:
             self.is_active = False
+            
+            
+ if not_counter >= max_not_counter:
+                not_counter = 0
+                message = "test"
+                #message = f"Phase:{scheduler.phase} | Temperature:{temperature.last} | RTC:{rtc.datetime()}"
+                #title = "pico-Incubator State"
+                #req = f"https://api.pushover.net/1/messages.json?token={secrets.not_token}&user={secrets.not_user_key}&title={title}&message={message}"
+                #x = wifi.post(req)
+                #print(x)
+            else:
+                not_counter = not_counter + 1
+                print("tick!")

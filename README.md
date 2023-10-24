@@ -6,21 +6,62 @@ Resources for in-house cell incubator controller based on Raspberry Pi Pico W. T
 
 The incubator's main purpose is to maintian light conditions and record temperature and humidity for the cell culture growth of *Chlamydomonas reinhardtii*. The apparatus has a main controller board and some attached peripherals.
 
+
+
+## Device Schematics
+
 ```mermaid
+---
+title: Device Schematics
+---
 graph LR
-	mcu[Main-Controller] --- relay --"conects to"--> Tube-Revolver
+	mcu[Main-Controller<br>Pico W MCU] -.- relay -. "conects to" .-> Tube-Revolver
 	mcu --- Light-matrix
 	mcu --- buzzer
 	mcu --- Button1 -.and.- Button2
-	mcu --- dh22[DH22 Temp & Humidity Sensor]
-	mcu --- UA7805C[UA7805C Linear Power Regulator] --powers--> Light-matrix
+	mcu --- tandh[Temp & Humidity Sensor]
 	mcu --- LCD-display
+	mcu --- Peltier-TC -.- TC-Fans
+	tandh -.feeds .- Peltier-TC
+	mcu --- circulation-fans
+	mcu --- photo-diodes
+	mcu -."wifi".- server[(Server)]
 	
 ```
 
 
 
-<img src="https://github.com/yatharthb97/yatharthb97.github.io/blob/04e7f099e768a1e84804a514f43867c4c8284db6/assets/images/pico_incubator.jpg?raw=true" alt="Prototype 1" style="zoom:50%;" />
+```mermaid
+---
+title: Power Regulation Schematics
+---
+
+graph LR
+
+	GND((Common<br>GND)) --> 5V-2A
+	GND --> 5V-3.5A
+	GND --> 12V-5A
+	
+	5V-2A --power--> MCU
+  
+  5V-3.5A --power--> LightMatrix1 -.- LightMatrix2
+  5V-3.5A --power--> Circulation-fans
+  
+  12V-5A --powers--> PeltierTC
+  12V-5A --voltage-divider--> 5V-5A --> PeltierTC-fans
+	
+
+```
+
+## Devices
+
+| Circuit ID        | Description                                           | Picture                                                      |
+| ----------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| incubator_proto_1 | Single Incubator Control unit with single Lightmatrix | <img src="https://github.com/yatharthb97/yatharthb97.github.io/raw/04e7f099e768a1e84804a514f43867c4c8284db6/assets/images/pico_incubator.jpg?raw=true" style="zoom:25%; " /> |
+|                   |                                                       |                                                              |
+|                   |                                                       |                                                              |
+
+
 
 
 
@@ -94,16 +135,32 @@ graph LR
 
 ## Control Flow
 
-1. Main Routine
+1. Main Routine on Processor1:
 
 ```mermaid
 graph LR
-	start((Start)) --> core0[[on core 0]] --> set-resources --> set-actions --> set-timers --> Free-REPL  
-	set-resources --> core1[[on core 1]] --> set-socket --> set-server --> process-requests
+	start((Start)) --> core0[[on processor1]] --> set-resources --> set-actions --> set-timers --> Free-REPL  
+	set-resources --> core1[[on processor2]] --> Periodic-Service-5 -.- process-requests
 	process-requests -.poll.-> process-requests
+	Periodic-Service-5 -.callbacks.-> Periodic-Service-5
 ```
 
-2. Set-Temperature and Humidity Averagers
+2. Timer 0: Periodic Service I : **Circadium Scheduler 1**
+
+   Look at the section: Illumination/Circadium Scheduler
+
+3. Timer 1: Periodic Service II: **Circadium Scheduler 2**
+
+   Look at the section: Illumination/Circadium Scheduler
+
+4. Timer 2: Periodic Service III : **Safety and Garbage Collection**
+
+   ```mermaid
+   flowchart LR
+   	Timer(Every<br>config.config.safety_callback_min) --> buzzer("buzzer.off()") --> gc("gc.collect()")
+   ```
+
+5. Timer 3: Periodic Service IV: **Set-Temperature and Humidity Averagers**
 
 ```mermaid
 graph LR
@@ -112,25 +169,48 @@ graph LR
 	read -.push.-> update-display
 ```
 
-3. Recurring Callbacks for date and time sync
+6. Processor2 : Periodic Service V: **Wifi-reconnection, regular machine reboots, and Datetime synchronisations.**
 
-```mermaid
-graph LR
-	RTim1((Periodic<br>Timer)) --> ureq("urequest(clock_server)") --parse--> urtc("Update-RTC")
-```
+   `ntptime` module throws `ETIMEDOUT` and `OverflowError` (inspected by multiple calls). This might be the cause of the problem since an exception occurs in an interrupt handler and results in a memory leak. Upon multiple concurrent calls, an Overflow error was detected which is scarry. Hence, the datetime sync periodic process has been moved to the 2nd processor, which has more resources to handle it. 
 
-4. Interrupt Routine with Actions (Switch 1 and Switch 2):
+   ```mermaid
+   graph LR
+   processor2 --> wifistatus1
+   processor2 --> periodic-resets
+   processor2 --> reg_dt_sync
+   main((main.py)) -.starts.- processor2
+   STOP{stop_processor2 <br>is true} -.halts.-> processor2
+   	wifistatus1("Wifi not connected") --> wifireconnect("wifi.connect()") --> counter{counter < 5} --true - with-delay--> wifireconnect
+   	counter --wifi-connected --> dt_sync("dt_sync()")
+   	counter --false--> reset("machine.reset()")
+   	
+   	periodic-resets --> reset_counter{"reset-counter <br> > config.reg_machine<br>_reset_min"}
+   	reset_counter --true--> reset("machine.reset()")
+   	reg_dt_sync --try--> dt_sync2("dt_sync()") --> gccollect("gc.collect()")
+   ```
+
+   The Datetime Sync Service is described:
+
+   ```mermaid
+   graph LR
+   	RTim1((dt_sync)) --> ureq("ntptime.settime()") --> offset-for-timezone ---> urtc("Update-rtc")
+   ```
+
++ Interrupt Routine with Actions (Switch 1 and Switch 2)  [DISABLED]:
 
 ```mermaid
 graph LR
 	Button2((On-button-press)) --> ISR --debouce--> toggle-relay("toggle-relay-state   or<br>revolver toggle on-off   or<br>lights toggle on-off")
 ```
 
-5. Fire Alarm Triggers [feature not implemented]
++ Fire Alarm Triggers [feature not implemented]
 
-+ The Gas Sensor must be warmed up for 5-10 minutes before it can be read.
-+ If the Gas Sensor has remained unused for a long time, it must be preheated for 24 hours atleast.
-+ The sensor consumes about ~800 mW of power.
+  + The Gas Sensor must be warmed up for 5-10 minutes before it can be read.
+
+  + If the Gas Sensor has remained unused for a long time, it must be preheated for 24 hours atleast.
+
+  + The sensor consumes about ~800 mW of power.
+
 
 ```mermaid
 graph LR
@@ -141,27 +221,27 @@ graph LR
 
 
 
-6. Power Rail Detection [feature not implemented]
++ Power Rail Detection [feature not implemented]
 
-   ​	No clue as of now on how to do it.
+​	No clue as of now on how to do it.
 
-   ```mermaid
-   graph LR
-   	Detect{Detect<br>Power<br>Rail} --> detection_mechanism{{detection mechanism}}--> buzz("Buzzer feedback")
-   	
-   ```
-   
-   7. Watchdog timer to correct for crashes [feature not implemented]
-   
-      ```python
-      from machine import WDT
-      wdt = WDT(timeout=2000)  # enable it with a timeout of 2s
-      wdt.feed()
-      ```
+```mermaid
+graph LR
+	Detect{Detect<br>Power<br>Rail} --> detection_mechanism{{detection mechanism}}--> buzz("Buzzer feedback")
+	
+```
 
-On rp2040 devices, the maximum timeout is 8388 ms. So the device would reset every 8 seconds. However, the wifi connection time is connected 3 seconds. This would not work.
++ Watchdog timer to correct for crashes [feature not implemented]
 
-## Illumination Scheduler
+```python
+from machine import WDT
+wdt = WDT(timeout=2000)  # enable it with a timeout of 2s
+wdt.feed()
+```
+
+On rp2040 devices, the maximum timeout is 8388 ms.  So the device would reset every 8 seconds. However, the minimum wifi connection time is around 3 seconds. **This would not work.**
+
+## Illumination/Circadium Scheduler
 
 ### Day-Night Cycles
 
@@ -193,7 +273,6 @@ The current time (**now**)  is compared to the schedules time(s), and the change
 2. The last actuation of that *phase* (day or night phase) must debounce the next for atleast 5 minutes. (not conserved on reboot)
 3. There must be enough cycles remaining for the execution. Each phases decreases the `remaining_cycle_count` by 0.5.
    [**!!! Requirement allows `cycles` parameter to be a float.**]
-4. 
 
 ### [TODO] Multiple CircadiumScheduler objects
 
@@ -240,15 +319,15 @@ class ScheduleParser:
   + 21 × 20mA / 1000  = 410/1000 = 0.41 A
   + 21 × 60mA / 1000 = 1260/1000 = 1.26A
 
-+ Rating for LM7805C is 5A ad 1.5A maximum. Therefore, it is being used **around** its full capacity. The Regulator has thermal protection shutdown.
++ Rating for LM7805C is 5V and 1.5A maximum. Therefore, it is being used **around** its full capacity. The Regulator has thermal protection shutdown.
 
 + **How to detect thermal shutdowns? : Use a Photosensor module with an IRQ on a minimum threshold raising an error.** For this to be reliable, the box needs to be closed-shut with magnets. Port for Potentiometer is free and is connected to an Analog Read Pin (ADC).
 
-### Add-on Current Source
++ Add-on Current Source: To add additional LED-matrix, a seperate current source with its own LM7805C Linear Voltage Regulator should be added with seperate Neopixel control pins. The same AC/DC converter power source with enough current input can be used.
+
++ **Update**:  The LM7805C IC was heating up a lot, hence it was disconnected. Power is being rerouted using a mod-board and using a Raspberry Pi 5V-3A USB-C power supply.
 
 
-
-To add additional LED-matrix, a seperate current source with its own LM7805C Linear Voltage Regulator should be added with seperate Neopixel control pins. The same AC/DC converter power source with enough current input can be used.
 
 
 
