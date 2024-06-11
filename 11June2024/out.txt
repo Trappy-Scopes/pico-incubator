@@ -1,0 +1,806 @@
+out
+out, (2024, 2, 12, 0, 18, 39, 24, 0), Machine Reset: 1
+out, (2024, 2, 12, 0, 19, 39, 33, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 12, 0, 19, 39, 34, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 12, 0, 19, 39, 34, 0), Phase detection: day
+out, (2024, 2, 12, 0, 19, 39, 38, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 12, 0, 19, 39, 38, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 12, 0, 19, 39, 38, 0), Wifi is connected: None.
+out, (2024, 2, 12, 0, 19, 39, 39, 0), Processor thread 1 was started: None
+out
+out, (2024, 2, 12, 0, 18, 41, 20, 0), Machine Reset: 1
+out
+out, (2024, 2, 12, 0, 18, 41, 29, 0), Machine Reset: 1
+out
+out, (2024, 2, 12, 0, 18, 41, 36, 0), Machine Reset: 1
+out
+out, (2024, 2, 12, 0, 18, 41, 56, 0), Machine Reset: 1
+out, (2024, 2, 12, 0, 19, 42, 5, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 12, 0, 19, 42, 6, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 12, 0, 19, 42, 6, 0), Phase detection: day
+out, (2024, 2, 12, 0, 19, 42, 10, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 12, 0, 19, 42, 10, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 12, 0, 19, 42, 11, 0), Wifi is connected: None.
+out, (2024, 2, 12, 0, 19, 42, 11, 0), Processor thread 1 was started: None
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 12, 0, 19, 42, 53, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 12, 0, 19, 42, 54, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 12, 0, 19, 42, 54, 0), Phase detection: day
+out, (2024, 2, 12, 0, 19, 42, 58, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 12, 0, 19, 42, 58, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 12, 0, 19, 42, 58, 0), Wifi is connected: None.
+out, (2024, 2, 12, 0, 19, 42, 59, 0), Processor thread 1 was started: None
+out, (2024, 2, 12, 0, 20, 0, 18, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 13, 1, 8, 0, 18, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2021, 1, 1, 4, 0, 0, 15, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 16, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 16, 0), Phase detection: night
+out, (2021, 1, 1, 4, 0, 0, 20, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2021, 1, 1, 4, 0, 0, 20, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 20, 0), Wifi could not be connected.
+out, (2021, 1, 1, 4, 0, 0, 21, 0), Processor thread 1 was started: None
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 14, 2, 14, 16, 40, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 14, 2, 14, 16, 41, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 14, 2, 14, 16, 41, 0), Phase detection: day
+out, (2024, 2, 14, 2, 14, 16, 45, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 14, 2, 14, 16, 45, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 14, 2, 14, 16, 46, 0), Wifi is connected: None.
+out, (2024, 2, 14, 2, 14, 16, 46, 0), Processor thread 1 was started: None
+out, (2024, 2, 14, 2, 20, 0, 5, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 15, 3, 8, 0, 5, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 15, 3, 12, 21, 12, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 15, 3, 12, 21, 13, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 15, 3, 12, 21, 13, 0), Phase detection: day
+out, (2024, 2, 15, 3, 12, 21, 17, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 15, 3, 12, 21, 17, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 15, 3, 12, 21, 17, 0), Wifi is connected: None.
+out, (2024, 2, 15, 3, 12, 21, 18, 0), Processor thread 1 was started: None
+out, (2024, 2, 15, 3, 20, 0, 7, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 16, 4, 8, 0, 7, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 16, 4, 13, 41, 37, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 16, 4, 13, 41, 38, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 16, 4, 13, 41, 38, 0), Phase detection: day
+out, (2024, 2, 16, 4, 13, 41, 42, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 16, 4, 13, 41, 43, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 16, 4, 13, 41, 43, 0), Wifi is connected: None.
+out, (2024, 2, 16, 4, 13, 41, 43, 0), Processor thread 1 was started: None
+out, (2024, 2, 16, 4, 20, 0, 17, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 17, 5, 8, 0, 17, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 17, 5, 16, 9, 10, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 17, 5, 16, 9, 11, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 17, 5, 16, 9, 11, 0), Phase detection: day
+out, (2024, 2, 17, 5, 16, 9, 15, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 17, 5, 16, 9, 16, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 17, 5, 16, 9, 16, 0), Wifi is connected: None.
+out, (2024, 2, 17, 5, 16, 9, 16, 0), Processor thread 1 was started: None
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 17, 5, 16, 51, 53, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 17, 5, 16, 51, 54, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 17, 5, 16, 51, 54, 0), Phase detection: day
+out, (2024, 2, 17, 5, 16, 51, 58, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 17, 5, 16, 51, 58, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 17, 5, 16, 51, 58, 0), Wifi is connected: None.
+out, (2024, 2, 17, 5, 16, 51, 59, 0), Processor thread 1 was started: None
+out, (2024, 2, 17, 5, 20, 0, 18, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 18, 6, 8, 0, 18, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 18, 6, 19, 56, 42, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 18, 6, 19, 56, 43, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 18, 6, 19, 56, 43, 0), Phase detection: day
+out, (2024, 2, 18, 6, 19, 56, 47, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 18, 6, 19, 56, 48, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 18, 6, 19, 56, 48, 0), Wifi is connected: None.
+out, (2024, 2, 18, 6, 19, 56, 48, 0), Processor thread 1 was started: None
+out, (2024, 2, 18, 6, 20, 0, 7, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 19, 0, 8, 0, 7, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 2, 19, 0, 16, 21, 34, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 19, 0, 16, 21, 35, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 19, 0, 16, 21, 35, 0), Phase detection: day
+out, (2024, 2, 19, 0, 16, 21, 39, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 19, 0, 16, 21, 40, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 19, 0, 16, 21, 40, 0), Wifi is connected: None.
+out, (2024, 2, 19, 0, 16, 21, 40, 0), Processor thread 1 was started: None
+out, (2024, 2, 19, 0, 20, 0, 14, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 20, 1, 8, 0, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 2, 20, 1, 16, 57, 23, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 20, 1, 16, 57, 24, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 20, 1, 16, 57, 24, 0), Phase detection: day
+out, (2024, 2, 20, 1, 16, 57, 28, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 20, 1, 16, 57, 28, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 20, 1, 16, 57, 28, 0), Wifi is connected: None.
+out, (2024, 2, 20, 1, 16, 57, 29, 0), Processor thread 1 was started: None
+out, (2024, 2, 20, 1, 20, 0, 18, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 21, 2, 8, 0, 18, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 2, 21, 2, 14, 45, 4, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 21, 2, 14, 45, 5, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 21, 2, 14, 45, 5, 0), Phase detection: day
+out, (2024, 2, 21, 2, 14, 45, 9, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 21, 2, 14, 45, 9, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 21, 2, 14, 45, 9, 0), Wifi is connected: None.
+out, (2024, 2, 21, 2, 14, 45, 10, 0), Processor thread 1 was started: None
+out, (2024, 2, 21, 2, 20, 0, 14, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 22, 3, 8, 0, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 2, 22, 3, 19, 3, 20, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 22, 3, 19, 3, 21, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 22, 3, 19, 3, 21, 0), Phase detection: day
+out, (2024, 2, 22, 3, 19, 3, 25, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 22, 3, 19, 3, 25, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 22, 3, 19, 3, 25, 0), Wifi is connected: None.
+out, (2024, 2, 22, 3, 19, 3, 26, 0), Processor thread 1 was started: None
+out, (2024, 2, 22, 3, 20, 0, 15, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 23, 4, 8, 0, 15, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 2, 23, 4, 20, 47, 40, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 23, 4, 20, 47, 41, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 23, 4, 20, 47, 41, 0), Phase detection: night
+out, (2024, 2, 23, 4, 20, 47, 45, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 23, 4, 20, 47, 46, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 23, 4, 20, 47, 46, 0), Wifi is connected: None.
+out, (2024, 2, 23, 4, 20, 47, 46, 0), Processor thread 1 was started: None
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 24, 5, 7, 38, 1, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 24, 5, 7, 38, 2, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 24, 5, 7, 38, 2, 0), Phase detection: night
+out, (2024, 2, 24, 5, 7, 38, 7, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 24, 5, 7, 38, 7, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 24, 5, 7, 38, 7, 0), Wifi is connected: None.
+out, (2024, 2, 24, 5, 7, 38, 7, 0), Processor thread 1 was started: None
+out, (2024, 2, 24, 5, 8, 0, 11, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 24, 5, 20, 0, 11, 0), Transitioning to night light conditions: [0, 0, 0]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 25, 6, 15, 35, 8, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 25, 6, 15, 35, 9, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 25, 6, 15, 35, 9, 0), Phase detection: day
+out, (2024, 2, 25, 6, 15, 35, 13, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 25, 6, 15, 35, 13, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 25, 6, 15, 35, 14, 0), Wifi is connected: None.
+out, (2024, 2, 25, 6, 15, 35, 14, 0), Processor thread 1 was started: None
+out, (2024, 2, 25, 6, 20, 0, 18, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 26, 0, 8, 0, 18, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 2, 26, 0, 18, 4, 15, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 26, 0, 18, 4, 16, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 26, 0, 18, 4, 16, 0), Phase detection: day
+out, (2024, 2, 26, 0, 18, 4, 20, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 26, 0, 18, 4, 20, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 26, 0, 18, 4, 20, 0), Wifi is connected: None.
+out, (2024, 2, 26, 0, 18, 4, 21, 0), Processor thread 1 was started: None
+out, (2024, 2, 26, 0, 20, 0, 9, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 27, 1, 8, 0, 9, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 27, 1, 18, 57, 32, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 27, 1, 18, 57, 33, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 27, 1, 18, 57, 33, 0), Phase detection: day
+out, (2024, 2, 27, 1, 18, 57, 37, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 27, 1, 18, 57, 37, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 27, 1, 18, 57, 37, 0), Wifi is connected: None.
+out, (2024, 2, 27, 1, 18, 57, 38, 0), Processor thread 1 was started: None
+out, (2024, 2, 27, 1, 20, 0, 12, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 28, 2, 8, 0, 12, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 2, 28, 2, 18, 30, 21, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 28, 2, 18, 30, 22, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 28, 2, 18, 30, 22, 0), Phase detection: day
+out, (2024, 2, 28, 2, 18, 30, 27, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 28, 2, 18, 30, 27, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 28, 2, 18, 30, 27, 0), Wifi is connected: None.
+out, (2024, 2, 28, 2, 18, 30, 27, 0), Processor thread 1 was started: None
+out, (2024, 2, 28, 2, 20, 0, 16, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 2, 29, 3, 8, 0, 16, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 2, 29, 3, 19, 23, 30, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 29, 3, 19, 23, 31, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 2, 29, 3, 19, 23, 31, 0), Phase detection: day
+out, (2024, 2, 29, 3, 19, 23, 35, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 2, 29, 3, 19, 23, 35, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 2, 29, 3, 19, 23, 36, 0), Wifi is connected: None.
+out, (2024, 2, 29, 3, 19, 23, 36, 0), Processor thread 1 was started: None
+out, (2024, 2, 29, 3, 20, 0, 10, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 1, 4, 8, 0, 10, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 1, 4, 18, 12, 11, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 1, 4, 18, 12, 12, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 1, 4, 18, 12, 12, 0), Phase detection: day
+out, (2024, 3, 1, 4, 18, 12, 16, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 1, 4, 18, 12, 16, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 1, 4, 18, 12, 16, 0), Wifi is connected: None.
+out, (2024, 3, 1, 4, 18, 12, 17, 0), Processor thread 1 was started: None
+out, (2024, 3, 1, 4, 20, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 2, 5, 8, 0, 6, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 2, 5, 13, 28, 54, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 2, 5, 13, 28, 55, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 2, 5, 13, 28, 55, 0), Phase detection: day
+out, (2024, 3, 2, 5, 13, 28, 59, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 2, 5, 13, 28, 59, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 2, 5, 13, 28, 59, 0), Wifi is connected: None.
+out, (2024, 3, 2, 5, 13, 29, 0, 0), Processor thread 1 was started: None
+out, (2024, 3, 2, 5, 20, 0, 19, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 3, 6, 8, 0, 19, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 4, 0, 18, 6, 41, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 4, 0, 18, 6, 42, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 4, 0, 18, 6, 42, 0), Phase detection: day
+out, (2024, 3, 4, 0, 18, 6, 46, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 4, 0, 18, 6, 47, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 4, 0, 18, 6, 47, 0), Wifi is connected: None.
+out, (2024, 3, 4, 0, 18, 6, 47, 0), Processor thread 1 was started: None
+out, (2024, 3, 4, 0, 20, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 5, 1, 8, 0, 6, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 7, 3, 18, 17, 31, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 7, 3, 18, 17, 32, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 7, 3, 18, 17, 32, 0), Phase detection: day
+out, (2024, 3, 7, 3, 18, 17, 36, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 7, 3, 18, 17, 36, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 7, 3, 18, 17, 37, 0), Wifi is connected: None.
+out, (2024, 3, 7, 3, 18, 17, 37, 0), Processor thread 1 was started: None
+out, (2024, 3, 7, 3, 20, 0, 11, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 8, 4, 8, 0, 11, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 8, 4, 12, 37, 14, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 8, 4, 12, 37, 15, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 8, 4, 12, 37, 15, 0), Phase detection: day
+out, (2024, 3, 8, 4, 12, 37, 19, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 8, 4, 12, 37, 19, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 8, 4, 12, 37, 19, 0), Wifi is connected: None.
+out, (2024, 3, 8, 4, 12, 37, 20, 0), Processor thread 1 was started: None
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 8, 4, 18, 18, 18, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 8, 4, 18, 18, 19, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 8, 4, 18, 18, 19, 0), Phase detection: day
+out, (2024, 3, 8, 4, 18, 18, 23, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 8, 4, 18, 18, 23, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 8, 4, 18, 18, 24, 0), Wifi is connected: None.
+out, (2024, 3, 8, 4, 18, 18, 24, 0), Processor thread 1 was started: None
+out, (2024, 3, 8, 4, 20, 0, 13, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 9, 5, 8, 0, 13, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 11, 0, 12, 7, 20, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 11, 0, 12, 7, 21, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 11, 0, 12, 7, 21, 0), Phase detection: day
+out, (2024, 3, 11, 0, 12, 7, 25, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 11, 0, 12, 7, 26, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 11, 0, 12, 7, 26, 0), Wifi is connected: None.
+out, (2024, 3, 11, 0, 12, 7, 26, 0), Processor thread 1 was started: None
+out, (2024, 3, 11, 0, 20, 0, 15, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 12, 1, 8, 0, 15, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 12, 1, 12, 4, 17, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 12, 1, 12, 4, 18, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 12, 1, 12, 4, 18, 0), Phase detection: day
+out, (2024, 3, 12, 1, 12, 4, 22, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 12, 1, 12, 4, 22, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 12, 1, 12, 4, 22, 0), Wifi is connected: None.
+out, (2024, 3, 12, 1, 12, 4, 23, 0), Processor thread 1 was started: None
+out, (2024, 3, 12, 1, 20, 0, 12, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 13, 2, 8, 0, 12, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 13, 2, 15, 51, 7, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 13, 2, 15, 51, 8, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 13, 2, 15, 51, 8, 0), Phase detection: day
+out, (2024, 3, 13, 2, 15, 51, 12, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 13, 2, 15, 51, 13, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 13, 2, 15, 51, 13, 0), Wifi is connected: None.
+out, (2024, 3, 13, 2, 15, 51, 13, 0), Processor thread 1 was started: None
+out, (2024, 3, 13, 2, 20, 0, 17, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 14, 3, 8, 0, 17, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 14, 3, 14, 4, 15, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 14, 3, 14, 4, 16, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 14, 3, 14, 4, 16, 0), Phase detection: day
+out, (2024, 3, 14, 3, 14, 4, 20, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 14, 3, 14, 4, 20, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 14, 3, 14, 4, 20, 0), Wifi is connected: None.
+out, (2024, 3, 14, 3, 14, 4, 21, 0), Processor thread 1 was started: None
+out, (2024, 3, 14, 3, 20, 0, 10, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 15, 4, 8, 0, 10, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 15, 4, 16, 8, 16, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 15, 4, 16, 8, 17, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 15, 4, 16, 8, 17, 0), Phase detection: day
+out, (2024, 3, 15, 4, 16, 8, 21, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 15, 4, 16, 8, 22, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 15, 4, 16, 8, 22, 0), Wifi is connected: None.
+out, (2024, 3, 15, 4, 16, 8, 22, 0), Processor thread 1 was started: None
+out, (2024, 3, 15, 4, 20, 0, 11, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 16, 5, 8, 0, 11, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 16, 5, 15, 47, 15, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 16, 5, 15, 47, 16, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 16, 5, 15, 47, 16, 0), Phase detection: day
+out, (2024, 3, 16, 5, 15, 47, 20, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 16, 5, 15, 47, 21, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 16, 5, 15, 47, 21, 0), Wifi is connected: None.
+out, (2024, 3, 16, 5, 15, 47, 21, 0), Processor thread 1 was started: None
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 16, 5, 16, 6, 19, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 16, 5, 16, 6, 20, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 16, 5, 16, 6, 20, 0), Phase detection: day
+out, (2024, 3, 16, 5, 16, 6, 24, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 16, 5, 16, 6, 24, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 16, 5, 16, 6, 24, 0), Wifi is connected: None.
+out, (2024, 3, 16, 5, 16, 6, 25, 0), Processor thread 1 was started: None
+out, (2024, 3, 16, 5, 20, 0, 14, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 17, 6, 8, 0, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 18, 0, 16, 48, 12, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 18, 0, 16, 48, 13, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 18, 0, 16, 48, 13, 0), Phase detection: day
+out, (2024, 3, 18, 0, 16, 48, 17, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 18, 0, 16, 48, 17, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 18, 0, 16, 48, 18, 0), Wifi is connected: None.
+out, (2024, 3, 18, 0, 16, 48, 18, 0), Processor thread 1 was started: None
+out, (2024, 3, 18, 0, 20, 0, 7, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 19, 1, 8, 0, 7, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 19, 1, 18, 53, 9, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 19, 1, 18, 53, 10, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 19, 1, 18, 53, 10, 0), Phase detection: day
+out, (2024, 3, 19, 1, 18, 53, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 19, 1, 18, 53, 14, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 19, 1, 18, 53, 15, 0), Wifi is connected: None.
+out, (2024, 3, 19, 1, 18, 53, 15, 0), Processor thread 1 was started: None
+out, (2024, 3, 19, 1, 20, 0, 19, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 20, 2, 8, 0, 19, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 20, 2, 19, 22, 50, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 20, 2, 19, 22, 51, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 20, 2, 19, 22, 51, 0), Phase detection: day
+out, (2024, 3, 20, 2, 19, 22, 55, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 20, 2, 19, 22, 55, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 20, 2, 19, 22, 55, 0), Wifi is connected: None.
+out, (2024, 3, 20, 2, 19, 22, 56, 0), Processor thread 1 was started: None
+out, (2024, 3, 20, 2, 20, 0, 15, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 21, 3, 8, 0, 15, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 21, 3, 19, 44, 42, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 21, 3, 19, 44, 43, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 21, 3, 19, 44, 43, 0), Phase detection: day
+out, (2024, 3, 21, 3, 19, 44, 47, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 21, 3, 19, 44, 48, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 21, 3, 19, 44, 48, 0), Wifi is connected: None.
+out, (2024, 3, 21, 3, 19, 44, 48, 0), Processor thread 1 was started: None
+out, (2024, 3, 21, 3, 20, 0, 7, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 22, 4, 8, 0, 7, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 22, 4, 11, 36, 36, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 22, 4, 11, 36, 37, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 22, 4, 11, 36, 37, 0), Phase detection: day
+out, (2024, 3, 22, 4, 11, 36, 41, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 22, 4, 11, 36, 41, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 22, 4, 11, 36, 41, 0), Wifi is connected: None.
+out, (2024, 3, 22, 4, 11, 36, 42, 0), Processor thread 1 was started: None
+out, (2024, 3, 22, 4, 20, 0, 16, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 23, 5, 8, 0, 16, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 24, 6, 13, 59, 26, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 24, 6, 13, 59, 27, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 24, 6, 13, 59, 27, 0), Phase detection: day
+out, (2024, 3, 24, 6, 13, 59, 31, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 24, 6, 13, 59, 32, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 24, 6, 13, 59, 32, 0), Wifi is connected: None.
+out, (2024, 3, 24, 6, 13, 59, 32, 0), Processor thread 1 was started: None
+out, (2024, 3, 24, 6, 20, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 25, 0, 8, 0, 6, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 26, 1, 14, 17, 38, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 26, 1, 14, 17, 39, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 26, 1, 14, 17, 39, 0), Phase detection: day
+out, (2024, 3, 26, 1, 14, 17, 43, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 26, 1, 14, 17, 44, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 26, 1, 14, 17, 44, 0), Wifi is connected: None.
+out, (2024, 3, 26, 1, 14, 17, 44, 0), Processor thread 1 was started: None
+out, (2024, 3, 26, 1, 20, 0, 18, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 27, 2, 8, 0, 18, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 27, 2, 16, 43, 30, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 27, 2, 16, 43, 31, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 27, 2, 16, 43, 31, 0), Phase detection: day
+out, (2024, 3, 27, 2, 16, 43, 35, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 27, 2, 16, 43, 35, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 27, 2, 16, 43, 35, 0), Wifi is connected: None.
+out, (2024, 3, 27, 2, 16, 43, 36, 0), Processor thread 1 was started: None
+out, (2024, 3, 27, 2, 20, 0, 10, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 28, 3, 8, 0, 10, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 28, 3, 18, 8, 5, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 28, 3, 18, 8, 6, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 28, 3, 18, 8, 6, 0), Phase detection: day
+out, (2024, 3, 28, 3, 18, 8, 10, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 28, 3, 18, 8, 11, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 28, 3, 18, 8, 11, 0), Wifi is connected: None.
+out, (2024, 3, 28, 3, 18, 8, 11, 0), Processor thread 1 was started: None
+out, (2024, 3, 28, 3, 20, 0, 15, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 29, 4, 8, 0, 15, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 3, 30, 5, 18, 27, 9, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 30, 5, 18, 27, 10, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 3, 30, 5, 18, 27, 10, 0), Phase detection: day
+out, (2024, 3, 30, 5, 18, 27, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 3, 30, 5, 18, 27, 15, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 3, 30, 5, 18, 27, 15, 0), Wifi is connected: None.
+out, (2024, 3, 30, 5, 18, 27, 15, 0), Processor thread 1 was started: None
+out, (2024, 3, 30, 5, 20, 0, 4, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 3, 31, 6, 8, 0, 4, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 1, 0, 15, 51, 4, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 1, 0, 15, 51, 5, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 1, 0, 15, 51, 5, 0), Phase detection: day
+out, (2024, 4, 1, 0, 15, 51, 9, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 1, 0, 15, 51, 9, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 1, 0, 15, 51, 10, 0), Wifi is connected: None.
+out, (2024, 4, 1, 0, 15, 51, 10, 0), Processor thread 1 was started: None
+out, (2024, 4, 1, 0, 20, 0, 14, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 2, 1, 8, 0, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 3, 2, 9, 18, 15, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 3, 2, 9, 18, 16, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 3, 2, 9, 18, 16, 0), Phase detection: day
+out, (2024, 4, 3, 2, 9, 18, 20, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 3, 2, 9, 18, 20, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 3, 2, 9, 18, 21, 0), Wifi is connected: None.
+out, (2024, 4, 3, 2, 9, 18, 21, 0), Processor thread 1 was started: None
+out, (2024, 4, 3, 2, 20, 0, 10, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 4, 3, 8, 0, 10, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 4, 3, 19, 5, 49, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 4, 3, 19, 5, 50, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 4, 3, 19, 5, 50, 0), Phase detection: day
+out, (2024, 4, 4, 3, 19, 5, 55, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 4, 3, 19, 5, 55, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 4, 3, 19, 5, 55, 0), Wifi is connected: None.
+out, (2024, 4, 4, 3, 19, 5, 55, 0), Processor thread 1 was started: None
+out, (2024, 4, 4, 3, 20, 0, 14, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 5, 4, 8, 0, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 5, 4, 17, 29, 15, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 5, 4, 17, 29, 16, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 5, 4, 17, 29, 16, 0), Phase detection: day
+out, (2024, 4, 5, 4, 17, 29, 20, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 5, 4, 17, 29, 20, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 5, 4, 17, 29, 20, 0), Wifi is connected: None.
+out, (2024, 4, 5, 4, 17, 29, 21, 0), Processor thread 1 was started: None
+out, (2024, 4, 5, 4, 20, 0, 10, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 6, 5, 8, 0, 10, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 8, 0, 13, 55, 10, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 8, 0, 13, 55, 11, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 8, 0, 13, 55, 11, 0), Phase detection: day
+out, (2024, 4, 8, 0, 13, 55, 15, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 8, 0, 13, 55, 15, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 8, 0, 13, 55, 16, 0), Wifi is connected: None.
+out, (2024, 4, 8, 0, 13, 55, 16, 0), Processor thread 1 was started: None
+out, (2024, 4, 8, 0, 20, 0, 5, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 9, 1, 8, 0, 5, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 9, 1, 18, 16, 26, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 9, 1, 18, 16, 27, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 9, 1, 18, 16, 27, 0), Phase detection: day
+out, (2024, 4, 9, 1, 18, 16, 31, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 9, 1, 18, 16, 31, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 9, 1, 18, 16, 31, 0), Wifi is connected: None.
+out, (2024, 4, 9, 1, 18, 16, 32, 0), Processor thread 1 was started: None
+out, (2024, 4, 9, 1, 20, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 10, 2, 8, 0, 6, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 10, 2, 20, 42, 19, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 10, 2, 20, 42, 20, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 10, 2, 20, 42, 20, 0), Phase detection: night
+out, (2024, 4, 10, 2, 20, 42, 24, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 10, 2, 20, 42, 24, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 10, 2, 20, 42, 24, 0), Wifi is connected: None.
+out, (2024, 4, 10, 2, 20, 42, 25, 0), Processor thread 1 was started: None
+out, (2024, 4, 11, 3, 8, 0, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 11, 3, 17, 28, 13, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 11, 3, 17, 28, 14, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 11, 3, 17, 28, 14, 0), Phase detection: day
+out, (2024, 4, 11, 3, 17, 28, 19, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 11, 3, 17, 28, 19, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 11, 3, 17, 28, 19, 0), Wifi is connected: None.
+out, (2024, 4, 11, 3, 17, 28, 19, 0), Processor thread 1 was started: None
+out, (2024, 4, 11, 3, 20, 0, 8, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 12, 4, 8, 0, 8, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 13, 5, 18, 42, 7, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 13, 5, 18, 42, 8, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 13, 5, 18, 42, 8, 0), Phase detection: day
+out, (2024, 4, 13, 5, 18, 42, 12, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 13, 5, 18, 42, 12, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 13, 5, 18, 42, 13, 0), Wifi is connected: None.
+out, (2024, 4, 13, 5, 18, 42, 13, 0), Processor thread 1 was started: None
+out, (2024, 4, 13, 5, 20, 0, 17, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 14, 6, 8, 0, 17, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2021, 1, 1, 4, 0, 0, 16, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 17, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 17, 0), Phase detection: night
+out, (2021, 1, 1, 4, 0, 0, 21, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2021, 1, 1, 4, 0, 0, 22, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 22, 0), Wifi could not be connected.
+out, (2021, 1, 1, 4, 0, 0, 22, 0), Processor thread 1 was started: None
+out, (2021, 1, 1, 4, 0, 2, 48, 0), Unable to connect to Wifi. Auto-Reseting device.
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 3
+out, (2024, 4, 16, 1, 22, 24, 21, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 16, 1, 22, 24, 22, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 16, 1, 22, 24, 22, 0), Phase detection: night
+out, (2024, 4, 16, 1, 22, 24, 26, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 16, 1, 22, 24, 27, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 16, 1, 22, 24, 27, 0), Wifi is connected: None.
+out, (2024, 4, 16, 1, 22, 24, 27, 0), Processor thread 1 was started: None
+out, (2024, 4, 17, 2, 8, 0, 16, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 17, 2, 20, 0, 16, 0), Transitioning to night light conditions: [0, 0, 0]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 19, 4, 15, 26, 42, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 19, 4, 15, 26, 43, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 19, 4, 15, 26, 43, 0), Phase detection: day
+out, (2024, 4, 19, 4, 15, 26, 47, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 19, 4, 15, 26, 48, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 19, 4, 15, 26, 48, 0), Wifi is connected: None.
+out, (2024, 4, 19, 4, 15, 26, 48, 0), Processor thread 1 was started: None
+out, (2024, 4, 19, 4, 20, 0, 7, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 20, 5, 8, 0, 7, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 22, 0, 18, 51, 29, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 22, 0, 18, 51, 30, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 22, 0, 18, 51, 30, 0), Phase detection: day
+out, (2024, 4, 22, 0, 18, 51, 34, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 22, 0, 18, 51, 34, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 22, 0, 18, 51, 34, 0), Wifi is connected: None.
+out, (2024, 4, 22, 0, 18, 51, 35, 0), Processor thread 1 was started: None
+out, (2024, 4, 22, 0, 20, 0, 9, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 23, 1, 8, 0, 9, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 4, 24, 2, 21, 14, 18, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 24, 2, 21, 14, 19, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 4, 24, 2, 21, 14, 19, 0), Phase detection: night
+out, (2024, 4, 24, 2, 21, 14, 23, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 4, 24, 2, 21, 14, 24, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 4, 24, 2, 21, 14, 24, 0), Wifi is connected: None.
+out, (2024, 4, 24, 2, 21, 14, 24, 0), Processor thread 1 was started: None
+out, (2024, 4, 25, 3, 8, 0, 13, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 4, 25, 3, 20, 0, 13, 0), Transitioning to night light conditions: [0, 0, 0]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 8, 2, 11, 58, 2, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 8, 2, 11, 58, 3, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 8, 2, 11, 58, 3, 0), Phase detection: day
+out, (2024, 5, 8, 2, 11, 58, 7, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 8, 2, 11, 58, 7, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 8, 2, 11, 58, 8, 0), Wifi is connected: None.
+out, (2024, 5, 8, 2, 11, 58, 8, 0), Processor thread 1 was started: None
+out, (2024, 5, 8, 2, 20, 0, 12, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 9, 3, 8, 0, 12, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 9, 3, 20, 57, 18, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 9, 3, 20, 57, 19, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 9, 3, 20, 57, 19, 0), Phase detection: night
+out, (2024, 5, 9, 3, 20, 57, 23, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 9, 3, 20, 57, 24, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 9, 3, 20, 57, 24, 0), Wifi is connected: None.
+out, (2024, 5, 9, 3, 20, 57, 24, 0), Processor thread 1 was started: None
+out, (2024, 5, 10, 4, 8, 0, 13, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 10, 4, 18, 44, 24, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 10, 4, 18, 44, 25, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 10, 4, 18, 44, 25, 0), Phase detection: day
+out, (2024, 5, 10, 4, 18, 44, 29, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 10, 4, 18, 44, 29, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 10, 4, 18, 44, 29, 0), Wifi is connected: None.
+out, (2024, 5, 10, 4, 18, 44, 30, 0), Processor thread 1 was started: None
+out, (2024, 5, 10, 4, 20, 0, 19, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 11, 5, 8, 0, 19, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 11, 5, 19, 45, 5, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 11, 5, 19, 45, 6, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 11, 5, 19, 45, 6, 0), Phase detection: day
+out, (2024, 5, 11, 5, 19, 45, 10, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 11, 5, 19, 45, 10, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 11, 5, 19, 45, 10, 0), Wifi is connected: None.
+out, (2024, 5, 11, 5, 19, 45, 11, 0), Processor thread 1 was started: None
+out, (2024, 5, 11, 5, 20, 0, 15, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 12, 6, 8, 0, 15, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 15, 2, 17, 50, 35, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 15, 2, 17, 50, 36, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 15, 2, 17, 50, 36, 0), Phase detection: day
+out, (2024, 5, 15, 2, 17, 50, 40, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 15, 2, 17, 50, 40, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 15, 2, 17, 50, 41, 0), Wifi is connected: None.
+out, (2024, 5, 15, 2, 17, 50, 41, 0), Processor thread 1 was started: None
+out, (2024, 5, 15, 2, 20, 0, 15, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 16, 3, 8, 0, 15, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2021, 1, 1, 4, 0, 0, 14, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 15, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 15, 0), Phase detection: night
+out, (2021, 1, 1, 4, 0, 0, 19, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2021, 1, 1, 4, 0, 0, 20, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 20, 0), Wifi could not be connected.
+out, (2021, 1, 1, 4, 0, 0, 20, 0), Processor thread 1 was started: None
+out, (2021, 1, 1, 4, 0, 0, 53, 0), On Processor 1, wifi connected: None.
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 17, 4, 17, 14, 49, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 17, 4, 17, 14, 50, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 17, 4, 17, 14, 50, 0), Phase detection: day
+out, (2024, 5, 17, 4, 17, 14, 54, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 17, 4, 17, 14, 54, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 17, 4, 17, 14, 54, 0), Wifi is connected: None.
+out, (2024, 5, 17, 4, 17, 14, 55, 0), Processor thread 1 was started: None
+out, (2024, 5, 17, 4, 20, 0, 14, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 18, 5, 8, 0, 14, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 18, 5, 21, 44, 57, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 18, 5, 21, 44, 58, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 18, 5, 21, 44, 58, 0), Phase detection: night
+out, (2024, 5, 18, 5, 21, 45, 2, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 18, 5, 21, 45, 3, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 18, 5, 21, 45, 3, 0), Wifi is connected: None.
+out, (2024, 5, 18, 5, 21, 45, 3, 0), Processor thread 1 was started: None
+out, (2024, 5, 19, 6, 8, 0, 7, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 19, 6, 20, 0, 7, 0), Transitioning to night light conditions: [0, 0, 0]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 20, 0, 13, 30, 23, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 20, 0, 13, 30, 24, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 20, 0, 13, 30, 24, 0), Phase detection: day
+out, (2024, 5, 20, 0, 13, 30, 28, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 20, 0, 13, 30, 28, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 20, 0, 13, 30, 28, 0), Wifi is connected: None.
+out, (2024, 5, 20, 0, 13, 30, 29, 0), Processor thread 1 was started: None
+out, (2024, 5, 20, 0, 20, 0, 18, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 21, 1, 8, 0, 18, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 5, 22, 2, 18, 30, 43, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 22, 2, 18, 30, 44, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 22, 2, 18, 30, 44, 0), Phase detection: day
+out, (2024, 5, 22, 2, 18, 30, 48, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 22, 2, 18, 30, 48, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 22, 2, 18, 30, 48, 0), Wifi is connected: None.
+out, (2024, 5, 22, 2, 18, 30, 49, 0), Processor thread 1 was started: None
+out, (2024, 5, 22, 2, 20, 0, 8, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 23, 3, 8, 0, 8, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 23, 3, 15, 42, 21, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 23, 3, 15, 42, 22, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 23, 3, 15, 42, 22, 0), Phase detection: day
+out, (2024, 5, 23, 3, 15, 42, 26, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 23, 3, 15, 42, 27, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 23, 3, 15, 42, 27, 0), Wifi is connected: None.
+out, (2024, 5, 23, 3, 15, 42, 27, 0), Processor thread 1 was started: None
+out, (2024, 5, 23, 3, 20, 0, 16, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 24, 4, 8, 0, 16, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 5, 24, 4, 20, 31, 38, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 24, 4, 20, 31, 39, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 24, 4, 20, 31, 39, 0), Phase detection: night
+out, (2024, 5, 24, 4, 20, 31, 43, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 24, 4, 20, 31, 43, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 24, 4, 20, 31, 43, 0), Wifi is connected: None.
+out, (2024, 5, 24, 4, 20, 31, 44, 0), Processor thread 1 was started: None
+out, (2024, 5, 25, 5, 8, 0, 18, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 25, 5, 20, 0, 18, 0), Transitioning to night light conditions: [0, 0, 0]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 27, 0, 11, 56, 11, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 27, 0, 11, 56, 12, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 27, 0, 11, 56, 12, 0), Phase detection: day
+out, (2024, 5, 27, 0, 11, 56, 16, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 27, 0, 11, 56, 16, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 27, 0, 11, 56, 16, 0), Wifi is connected: None.
+out, (2024, 5, 27, 0, 11, 56, 17, 0), Processor thread 1 was started: None
+out, (2024, 5, 27, 0, 20, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 28, 1, 8, 0, 6, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 5, 29, 2, 19, 16, 59, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 29, 2, 19, 17, 0, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 5, 29, 2, 19, 17, 0, 0), Phase detection: day
+out, (2024, 5, 29, 2, 19, 17, 4, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 5, 29, 2, 19, 17, 4, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 5, 29, 2, 19, 17, 4, 0), Wifi is connected: None.
+out, (2024, 5, 29, 2, 19, 17, 5, 0), Processor thread 1 was started: None
+out, (2024, 5, 29, 2, 20, 0, 9, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 5, 30, 3, 8, 0, 9, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Machine Reset: 1
+out, (2024, 6, 4, 1, 19, 38, 47, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 6, 4, 1, 19, 38, 48, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 6, 4, 1, 19, 38, 48, 0), Phase detection: day
+out, (2024, 6, 4, 1, 19, 38, 52, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 6, 4, 1, 19, 38, 52, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 6, 4, 1, 19, 38, 53, 0), Wifi is connected: None.
+out, (2024, 6, 4, 1, 19, 38, 53, 0), Processor thread 1 was started: None
+out, (2024, 6, 4, 1, 20, 0, 12, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 6, 5, 2, 8, 0, 12, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
+out, (2024, 6, 7, 4, 19, 51, 32, 0), RTC-NTP sync callback set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 6, 7, 4, 19, 51, 33, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2024, 6, 7, 4, 19, 51, 33, 0), Phase detection: day
+out, (2024, 6, 7, 4, 19, 51, 37, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2024, 6, 7, 4, 19, 51, 37, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2024, 6, 7, 4, 19, 51, 38, 0), Wifi is connected: None.
+out, (2024, 6, 7, 4, 19, 51, 38, 0), Processor thread 1 was started: None
+out, (2024, 6, 7, 4, 20, 0, 12, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2024, 6, 8, 5, 8, 0, 12, 0), Transitioning to day light conditions: [255, 255, 255]
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), Machine Reset: 1
