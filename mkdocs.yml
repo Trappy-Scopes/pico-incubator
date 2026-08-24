@@ -1,0 +1,55 @@
+site_name: "Trappy-Scopes/pico-incubator"
+site_description: "Permanent record of the cell-culture incubator: light cycle, temperature, and board reliability."
+site_url: https://trappy-scopes.github.io/pico-incubator
+repo_url: https://github.com/Trappy-Scopes/pico-incubator
+edit_uri: ""
+
+nav:
+  - Home: index.md
+  - Temperature: temperature.md
+  - Light cycle: light-cycle.md
+  - Reliability: reliability.md
+  - The data: data.md
+  - All Trappy-Scopes projects: https://trappy-scopes.github.io/
+
+theme:
+  name: material
+  logo: assets/tsicon.png
+  favicon: assets/tsicon.png
+  palette:
+    - scheme: slate
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - attr_list
+  - md_in_html
+  - tables

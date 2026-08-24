@@ -1,0 +1,266 @@
+out
+out, (2026, 8, 23, 6, 19, 12, 38, 0), BOOT reset_cause=1 (PWRON)
+out, (2026, 8, 23, 6, 19, 12, 40, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 12, 40, 0), Phase detection: day
+out
+out, (2026, 8, 23, 6, 19, 13, 18, 0), BOOT reset_cause=1 (PWRON)
+out, (2026, 8, 23, 6, 19, 13, 20, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 13, 20, 0), Phase detection: day
+out
+out, (2026, 8, 23, 6, 19, 15, 42, 0), BOOT reset_cause=1 (PWRON)
+out, (2026, 8, 23, 6, 19, 15, 44, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 15, 44, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 15, 47, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 15, 47, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2026, 8, 23, 6, 19, 15, 47, 0), WDT armed 8000 ms, fed 1 Hz, clock checkpointed 1 Hz
+out
+out, (2026, 8, 23, 6, 19, 16, 53, 0), BOOT reset_cause=1 (PWRON)
+out
+out, (2026, 8, 23, 6, 19, 16, 47, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2021, 1, 1, 4, 0, 0, 1, 0)
+out, (2026, 8, 23, 6, 19, 16, 49, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 16, 49, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 16, 51, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 16, 51, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2026, 8, 23, 6, 19, 16, 51, 0), WDT armed 8000 ms, fed 1 Hz, clock checkpointed 1 Hz
+out
+out, (2026, 8, 23, 6, 19, 16, 53, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2026, 8, 23, 6, 19, 17, 7, 0)
+out, (2026, 8, 23, 6, 19, 16, 55, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 16, 55, 0), Phase detection: day
+out
+out, (2026, 8, 23, 6, 19, 16, 53, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2021, 1, 1, 4, 0, 0, 1, 0)
+out, (2026, 8, 23, 6, 19, 16, 55, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 16, 55, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 16, 57, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 16, 57, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2026, 8, 23, 6, 19, 16, 57, 0), WDT armed 8000 ms, fed 1 Hz, clock checkpointed 1 Hz
+out
+out, (2026, 8, 23, 6, 19, 17, 1, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2026, 8, 23, 6, 19, 17, 23, 0)
+out, (2026, 8, 23, 6, 19, 17, 3, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 17, 3, 0), Phase detection: day
+out
+out, (2026, 8, 23, 6, 19, 17, 1, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2021, 1, 1, 4, 0, 0, 1, 0)
+out, (2026, 8, 23, 6, 19, 17, 3, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 17, 3, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 17, 5, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 17, 5, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2026, 8, 23, 6, 19, 17, 5, 0), WDT armed 8000 ms, fed 1 Hz, clock checkpointed 1 Hz
+out
+out, (2026, 8, 23, 6, 19, 17, 40, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2021, 1, 1, 4, 0, 0, 1, 0)
+out, (2026, 8, 23, 6, 19, 17, 42, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 17, 42, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 17, 44, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 17, 44, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2026, 8, 23, 6, 19, 17, 44, 0), WDT armed 8000 ms, fed 1 Hz, clock checkpointed 1 Hz
+out
+out, (2021, 1, 1, 4, 0, 0, 1, 0), BOOT reset_cause=1 (PWRON)
+out
+out, (2021, 1, 1, 4, 0, 0, 1, 0), BOOT reset_cause=1 (PWRON)
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 4, 0), Phase detection: night
+out, (2021, 1, 1, 4, 0, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2021, 1, 1, 4, 0, 0, 6, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 6, 0), WDT armed 8000 ms, fed 1 Hz, clock checkpointed 1 Hz
+out
+out, (2026, 8, 23, 6, 19, 21, 11, 0), BOOT reset_cause=1 (PWRON)
+out
+out, (2021, 1, 1, 4, 0, 0, 9, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2021, 1, 1, 4, 0, 0, 1, 0)
+out, (2021, 1, 1, 4, 0, 0, 11, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 11, 0), Phase detection: night
+out, (2021, 1, 1, 4, 0, 0, 13, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2021, 1, 1, 4, 0, 0, 13, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 13, 0), WDT armed 8000 ms, fed 1 Hz, clock checkpointed 1 Hz
+out
+out, (2021, 1, 1, 4, 0, 0, 16, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2026, 8, 23, 6, 19, 21, 24, 0)
+out, (2021, 1, 1, 4, 0, 0, 18, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 18, 0), Phase detection: night
+out
+out, (2021, 1, 1, 4, 0, 0, 16, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2021, 1, 1, 4, 0, 0, 1, 0)
+out
+out, (2021, 1, 1, 4, 0, 0, 1, 0), BOOT reset_cause=1 (PWRON)
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 3, 0), Phase detection: night
+out, (2021, 1, 1, 4, 0, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2021, 1, 1, 4, 0, 0, 6, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2021, 1, 1, 4, 0, 0, 6, 0), WDT armed 8000 ms, fed 1 Hz, clock checkpointed 1 Hz
+out
+out, (2026, 8, 23, 6, 19, 24, 7, 0), BOOT reset_cause=1 (PWRON)
+out, (2026, 8, 23, 6, 19, 24, 7, 0), WDT DISABLED (WDT_ENABLE=False); clock still checkpointed 1 Hz
+out, (2026, 8, 23, 6, 19, 24, 9, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 24, 9, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 24, 12, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 24, 12, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out
+out, (2026, 8, 23, 6, 19, 24, 14, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2021, 1, 1, 4, 0, 0, 2, 0)
+out, (2026, 8, 23, 6, 19, 24, 14, 0), WDT DISABLED (WDT_ENABLE=False); clock still checkpointed 1 Hz
+out, (2026, 8, 23, 6, 19, 24, 16, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 24, 16, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 24, 18, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 24, 19, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out
+out, (2026, 8, 23, 6, 19, 31, 18, 0), BOOT reset_cause=3 (WDT)  *** AUTO-RESET (WDT) *** clock restored: (2026, 8, 23, 6, 19, 31, 30, 0)
+out, (2026, 8, 23, 6, 19, 31, 18, 0), WDT DISABLED (WDT_ENABLE=False); clock still checkpointed 1 Hz
+out, (2026, 8, 23, 6, 19, 31, 20, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 31, 20, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 31, 22, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 31, 22, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out
+out, (2021, 1, 1, 4, 0, 0, 2, 0), BOOT reset_cause=1 (PWRON)
+out, (2021, 1, 1, 4, 0, 0, 2, 0), WDT DISABLED (WDT_ENABLE=False); clock still checkpointed 1 Hz
+out, (2021, 1, 1, 4, 0, 0, 4, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 4, 0), Phase detection: night
+out, (2021, 1, 1, 4, 0, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2021, 1, 1, 4, 0, 0, 6, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out
+out, (2026, 8, 23, 6, 19, 34, 23, 0), BOOT reset_cause=1 (PWRON)
+out, (2026, 8, 23, 6, 19, 34, 23, 0), WDT DISABLED (WDT_ENABLE=False); clock still checkpointed 1 Hz
+out, (2026, 8, 23, 6, 19, 34, 26, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 23, 6, 19, 34, 26, 0), Phase detection: day
+out, (2026, 8, 23, 6, 19, 34, 28, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 23, 6, 19, 34, 28, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out, (2026, 8, 23, 6, 19, 44, 28, 0), HB uptime_ms=616362 phase=day
+out, (2026, 8, 23, 6, 19, 54, 28, 0), HB uptime_ms=1216362 phase=day
+out, (2026, 8, 23, 6, 20, 0, 31, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2026, 8, 23, 6, 20, 4, 28, 0), HB uptime_ms=1816362 phase=night
+out, (2026, 8, 23, 6, 20, 14, 28, 0), HB uptime_ms=2416362 phase=night
+out, (2026, 8, 23, 6, 20, 24, 28, 0), HB uptime_ms=3016362 phase=night
+out, (2026, 8, 23, 6, 20, 34, 28, 0), HB uptime_ms=3616362 phase=night
+out, (2026, 8, 23, 6, 20, 44, 28, 0), HB uptime_ms=4216362 phase=night
+out, (2026, 8, 23, 6, 20, 54, 28, 0), HB uptime_ms=4816362 phase=night
+out, (2026, 8, 23, 6, 21, 4, 28, 0), HB uptime_ms=5416362 phase=night
+out, (2026, 8, 23, 6, 21, 14, 28, 0), HB uptime_ms=6016362 phase=night
+out, (2026, 8, 23, 6, 21, 24, 28, 0), HB uptime_ms=6616362 phase=night
+out, (2026, 8, 23, 6, 21, 34, 28, 0), HB uptime_ms=7216362 phase=night
+out, (2026, 8, 23, 6, 21, 44, 28, 0), HB uptime_ms=7816362 phase=night
+out, (2026, 8, 23, 6, 21, 54, 28, 0), HB uptime_ms=8416362 phase=night
+out, (2026, 8, 23, 6, 22, 4, 28, 0), HB uptime_ms=9016362 phase=night
+out, (2026, 8, 23, 6, 22, 14, 28, 0), HB uptime_ms=9616362 phase=night
+out, (2026, 8, 23, 6, 22, 24, 28, 0), HB uptime_ms=10216362 phase=night
+out, (2026, 8, 23, 6, 22, 34, 28, 0), HB uptime_ms=10816362 phase=night
+out, (2026, 8, 23, 6, 22, 44, 28, 0), HB uptime_ms=11416362 phase=night
+out, (2026, 8, 23, 6, 22, 54, 28, 0), HB uptime_ms=12016362 phase=night
+out, (2026, 8, 23, 6, 23, 4, 28, 0), HB uptime_ms=12616362 phase=night
+out, (2026, 8, 23, 6, 23, 14, 28, 0), HB uptime_ms=13216362 phase=night
+out, (2026, 8, 23, 6, 23, 24, 28, 0), HB uptime_ms=13816362 phase=night
+out, (2026, 8, 23, 6, 23, 34, 28, 0), HB uptime_ms=14416362 phase=night
+out, (2026, 8, 23, 6, 23, 44, 28, 0), HB uptime_ms=15016362 phase=night
+out, (2026, 8, 23, 6, 23, 54, 28, 0), HB uptime_ms=15616362 phase=night
+out, (2026, 8, 24, 0, 0, 4, 28, 0), HB uptime_ms=16216362 phase=night
+out, (2026, 8, 24, 0, 0, 14, 28, 0), HB uptime_ms=16816362 phase=night
+out, (2026, 8, 24, 0, 0, 24, 28, 0), HB uptime_ms=17416362 phase=night
+out, (2026, 8, 24, 0, 0, 34, 28, 0), HB uptime_ms=18016362 phase=night
+out, (2026, 8, 24, 0, 0, 44, 28, 0), HB uptime_ms=18616362 phase=night
+out, (2026, 8, 24, 0, 0, 54, 28, 0), HB uptime_ms=19216362 phase=night
+out, (2026, 8, 24, 0, 1, 4, 28, 0), HB uptime_ms=19816362 phase=night
+out, (2026, 8, 24, 0, 1, 14, 28, 0), HB uptime_ms=20416362 phase=night
+out, (2026, 8, 24, 0, 1, 24, 28, 0), HB uptime_ms=21016362 phase=night
+out, (2026, 8, 24, 0, 1, 34, 28, 0), HB uptime_ms=21616362 phase=night
+out, (2026, 8, 24, 0, 1, 44, 28, 0), HB uptime_ms=22216362 phase=night
+out, (2026, 8, 24, 0, 1, 54, 28, 0), HB uptime_ms=22816362 phase=night
+out, (2026, 8, 24, 0, 2, 4, 28, 0), HB uptime_ms=23416362 phase=night
+out, (2026, 8, 24, 0, 2, 14, 28, 0), HB uptime_ms=24016362 phase=night
+out, (2026, 8, 24, 0, 2, 24, 28, 0), HB uptime_ms=24616362 phase=night
+out, (2026, 8, 24, 0, 2, 34, 28, 0), HB uptime_ms=25216362 phase=night
+out, (2026, 8, 24, 0, 2, 44, 28, 0), HB uptime_ms=25816362 phase=night
+out, (2026, 8, 24, 0, 2, 54, 28, 0), HB uptime_ms=26416362 phase=night
+out, (2026, 8, 24, 0, 3, 4, 28, 0), HB uptime_ms=27016362 phase=night
+out, (2026, 8, 24, 0, 3, 14, 28, 0), HB uptime_ms=27616362 phase=night
+out, (2026, 8, 24, 0, 3, 24, 28, 0), HB uptime_ms=28216362 phase=night
+out, (2026, 8, 24, 0, 3, 34, 28, 0), HB uptime_ms=28816362 phase=night
+out, (2026, 8, 24, 0, 3, 44, 28, 0), HB uptime_ms=29416362 phase=night
+out, (2026, 8, 24, 0, 3, 54, 28, 0), HB uptime_ms=30016362 phase=night
+out, (2026, 8, 24, 0, 4, 4, 28, 0), HB uptime_ms=30616362 phase=night
+out, (2026, 8, 24, 0, 4, 14, 28, 0), HB uptime_ms=31216362 phase=night
+out, (2026, 8, 24, 0, 4, 24, 28, 0), HB uptime_ms=31816362 phase=night
+out, (2026, 8, 24, 0, 4, 34, 28, 0), HB uptime_ms=32416362 phase=night
+out, (2026, 8, 24, 0, 4, 44, 28, 0), HB uptime_ms=33016362 phase=night
+out, (2026, 8, 24, 0, 4, 54, 28, 0), HB uptime_ms=33616362 phase=night
+out, (2026, 8, 24, 0, 5, 4, 28, 0), HB uptime_ms=34216362 phase=night
+out, (2026, 8, 24, 0, 5, 14, 28, 0), HB uptime_ms=34816362 phase=night
+out, (2026, 8, 24, 0, 5, 24, 28, 0), HB uptime_ms=35416362 phase=night
+out, (2026, 8, 24, 0, 5, 34, 28, 0), HB uptime_ms=36016362 phase=night
+out, (2026, 8, 24, 0, 5, 44, 28, 0), HB uptime_ms=36616362 phase=night
+out, (2026, 8, 24, 0, 5, 54, 28, 0), HB uptime_ms=37216362 phase=night
+out, (2026, 8, 24, 0, 6, 4, 28, 0), HB uptime_ms=37816362 phase=night
+out, (2026, 8, 24, 0, 6, 14, 28, 0), HB uptime_ms=38416362 phase=night
+out, (2026, 8, 24, 0, 6, 24, 28, 0), HB uptime_ms=39016362 phase=night
+out, (2026, 8, 24, 0, 6, 34, 28, 0), HB uptime_ms=39616362 phase=night
+out, (2026, 8, 24, 0, 6, 44, 28, 0), HB uptime_ms=40216362 phase=night
+out, (2026, 8, 24, 0, 6, 54, 28, 0), HB uptime_ms=40816362 phase=night
+out, (2026, 8, 24, 0, 7, 4, 28, 0), HB uptime_ms=41416362 phase=night
+out, (2026, 8, 24, 0, 7, 14, 28, 0), HB uptime_ms=42016362 phase=night
+out, (2026, 8, 24, 0, 7, 24, 28, 0), HB uptime_ms=42616362 phase=night
+out, (2026, 8, 24, 0, 7, 34, 28, 0), HB uptime_ms=43216362 phase=night
+out, (2026, 8, 24, 0, 7, 44, 28, 0), HB uptime_ms=43816362 phase=night
+out, (2026, 8, 24, 0, 7, 54, 28, 0), HB uptime_ms=44416362 phase=night
+out, (2026, 8, 24, 0, 8, 0, 31, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 24, 0, 8, 4, 28, 0), HB uptime_ms=45016362 phase=day
+out, (2026, 8, 24, 0, 8, 14, 28, 0), HB uptime_ms=45616362 phase=day
+out, (2026, 8, 24, 0, 8, 24, 28, 0), HB uptime_ms=46216362 phase=day
+out, (2026, 8, 24, 0, 8, 34, 28, 0), HB uptime_ms=46816362 phase=day
+out, (2026, 8, 24, 0, 8, 44, 28, 0), HB uptime_ms=47416362 phase=day
+out, (2026, 8, 24, 0, 8, 54, 28, 0), HB uptime_ms=48016362 phase=day
+out, (2026, 8, 24, 0, 9, 4, 28, 0), HB uptime_ms=48616362 phase=day
+out, (2026, 8, 24, 0, 9, 14, 28, 0), HB uptime_ms=49216362 phase=day
+out, (2026, 8, 24, 0, 9, 24, 28, 0), HB uptime_ms=49816362 phase=day
+out, (2026, 8, 24, 0, 9, 34, 28, 0), HB uptime_ms=50416362 phase=day
+out, (2026, 8, 24, 0, 9, 44, 28, 0), HB uptime_ms=51016362 phase=day
+out, (2026, 8, 24, 0, 9, 54, 28, 0), HB uptime_ms=51616362 phase=day
+out, (2026, 8, 24, 0, 10, 4, 28, 0), HB uptime_ms=52216362 phase=day
+out, (2026, 8, 24, 0, 10, 14, 28, 0), HB uptime_ms=52816362 phase=day
+out, (2026, 8, 24, 0, 10, 24, 28, 0), HB uptime_ms=53416362 phase=day
+out, (2026, 8, 24, 0, 10, 34, 28, 0), HB uptime_ms=54016362 phase=day
+out, (2026, 8, 24, 0, 10, 44, 28, 0), HB uptime_ms=54616362 phase=day
+out, (2026, 8, 24, 0, 10, 54, 28, 0), HB uptime_ms=55216362 phase=day
+out, (2026, 8, 24, 0, 11, 4, 28, 0), HB uptime_ms=55816362 phase=day
+out, (2026, 8, 24, 0, 11, 14, 28, 0), HB uptime_ms=56416362 phase=day
+out, (2026, 8, 24, 0, 11, 24, 28, 0), HB uptime_ms=57016362 phase=day
+out, (2026, 8, 24, 0, 11, 34, 28, 0), HB uptime_ms=57616362 phase=day
+out, (2026, 8, 24, 0, 11, 44, 28, 0), HB uptime_ms=58216362 phase=day
+out, (2026, 8, 24, 0, 11, 54, 28, 0), HB uptime_ms=58816362 phase=day
+out, (2026, 8, 24, 0, 12, 4, 28, 0), HB uptime_ms=59416362 phase=day
+out, (2026, 8, 24, 0, 12, 14, 28, 0), HB uptime_ms=60016362 phase=day
+out, (2026, 8, 24, 0, 12, 24, 28, 0), HB uptime_ms=60616362 phase=day
+out, (2026, 8, 24, 0, 12, 34, 28, 0), HB uptime_ms=61216362 phase=day
+out, (2026, 8, 24, 0, 12, 44, 28, 0), HB uptime_ms=61816362 phase=day
+out, (2026, 8, 24, 0, 12, 54, 28, 0), HB uptime_ms=62416362 phase=day
+out, (2026, 8, 24, 0, 13, 4, 28, 0), HB uptime_ms=63016362 phase=day
+out, (2026, 8, 24, 0, 13, 14, 28, 0), HB uptime_ms=63616362 phase=day
+out, (2026, 8, 24, 0, 13, 24, 28, 0), HB uptime_ms=64216362 phase=day
+out, (2026, 8, 24, 0, 13, 34, 28, 0), HB uptime_ms=64816362 phase=day
+out, (2026, 8, 24, 0, 13, 44, 28, 0), HB uptime_ms=65416362 phase=day
+out, (2026, 8, 24, 0, 13, 54, 28, 0), HB uptime_ms=66016362 phase=day
+out, (2026, 8, 24, 0, 14, 4, 28, 0), HB uptime_ms=66616362 phase=day
+out, (2026, 8, 24, 0, 14, 14, 28, 0), HB uptime_ms=67216362 phase=day
+out, (2026, 8, 24, 0, 14, 24, 28, 0), HB uptime_ms=67816362 phase=day
+out, (2026, 8, 24, 0, 14, 34, 28, 0), HB uptime_ms=68416362 phase=day
+out, (2026, 8, 24, 0, 14, 44, 28, 0), HB uptime_ms=69016362 phase=day
+out, (2026, 8, 24, 0, 14, 54, 28, 0), HB uptime_ms=69616362 phase=day
+out, (2026, 8, 24, 0, 15, 4, 28, 0), HB uptime_ms=70216362 phase=day
+out, (2026, 8, 24, 0, 15, 14, 28, 0), HB uptime_ms=70816362 phase=day
+out, (2026, 8, 24, 0, 15, 24, 28, 0), HB uptime_ms=71416362 phase=day
+out, (2026, 8, 24, 0, 15, 34, 28, 0), HB uptime_ms=72016362 phase=day
+out, (2026, 8, 24, 0, 15, 44, 28, 0), HB uptime_ms=72616362 phase=day
+out, (2026, 8, 24, 0, 15, 54, 28, 0), HB uptime_ms=73216362 phase=day
+out, (2026, 8, 24, 0, 16, 4, 28, 0), HB uptime_ms=73816362 phase=day
+out, (2026, 8, 24, 0, 16, 14, 28, 0), HB uptime_ms=74416362 phase=day
+out, (2026, 8, 24, 0, 16, 24, 28, 0), HB uptime_ms=75016362 phase=day
+out, (2026, 8, 24, 0, 16, 34, 28, 0), HB uptime_ms=75616362 phase=day
+out, (2026, 8, 24, 0, 16, 44, 28, 0), HB uptime_ms=76216362 phase=day
+out, (2026, 8, 24, 0, 16, 54, 28, 0), HB uptime_ms=76816362 phase=day
+out, (2026, 8, 24, 0, 17, 4, 28, 0), HB uptime_ms=77416362 phase=day
+out, (2026, 8, 24, 0, 17, 14, 28, 0), HB uptime_ms=78016362 phase=day
+out, (2026, 8, 24, 0, 17, 24, 28, 0), HB uptime_ms=78616362 phase=day
+out
+out, (2021, 1, 1, 4, 0, 0, 1, 0), BOOT reset_cause=1 (PWRON)
+out, (2021, 1, 1, 4, 0, 0, 2, 0), WDT DISABLED (WDT_ENABLE=False); clock still checkpointed 1 Hz
+out, (2021, 1, 1, 4, 0, 0, 4, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2021, 1, 1, 4, 0, 0, 4, 0), Phase detection: night
+out, (2021, 1, 1, 4, 0, 0, 6, 0), Transitioning to night light conditions: [0, 0, 0]
+out, (2021, 1, 1, 4, 0, 0, 6, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
+out
+out, (2026, 8, 24, 0, 17, 27, 28, 0), BOOT reset_cause=1 (PWRON)
+out, (2026, 8, 24, 0, 17, 27, 28, 0), WDT DISABLED (WDT_ENABLE=False); clock still checkpointed 1 Hz
+out, (2026, 8, 24, 0, 17, 27, 30, 0), Set Circadium Scheduler: [8, 0], [20, 0], 0
+out, (2026, 8, 24, 0, 17, 27, 30, 0), Phase detection: day
+out, (2026, 8, 24, 0, 17, 27, 33, 0), Transitioning to day light conditions: [255, 255, 255]
+out, (2026, 8, 24, 0, 17, 27, 33, 0), Timer for Circadium Scheduler set: Timer(mode=PERIODIC, period=268819580, tick_hz=1000000)
