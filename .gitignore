@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 .venv/
 _to_delete/
+
+# ~5 MB, regenerated on every CI run; downloaded from the Actions artifact
+plots/interactive.html

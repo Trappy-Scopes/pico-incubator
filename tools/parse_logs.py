@@ -34,6 +34,7 @@ import ast
 import csv
 import os
 import re
+from datetime import datetime
 
 LOGS = "logs"
 REC = re.compile(
@@ -53,6 +54,51 @@ KINDS = (
     ("FS ",                     "filesystem"),
     ("Machine Reset",           "boot"),
 )
+
+
+def parse_instrument_csv(path, retrieved):
+    """Memmert ILP-series data export.
+
+        <model>; <serial>
+        <blank>
+        date; temp.; status
+        2026.08.24  16:32; 25.01; set temp.
+
+    Semicolon separated, newest row first, no humidity channel. Returns
+    (readings, events); anything whose status is not a plain set-point reading
+    is emitted as an event so alarms and door openings are not lost.
+    """
+    readings, evts = [], []
+    with open(path, encoding="utf-8-sig", errors="replace") as fh:
+        lines = [ln.rstrip("\n") for ln in fh]
+
+    sensor = os.path.basename(path)
+    if lines and ";" in lines[0]:
+        model, _, serial = lines[0].partition(";")
+        sensor = f"{model.strip()}/{serial.strip()}".replace(" ", "")
+        sensor = sensor.lstrip("\ufeff")      # some exports carry a double BOM
+
+    for ln in lines[1:]:
+        parts = [x.strip() for x in ln.split(";")]
+        if len(parts) < 3 or parts[0] in ("", "date"):
+            continue
+        try:
+            when = datetime.strptime(parts[0], "%Y.%m.%d  %H:%M")
+        except ValueError:
+            try:
+                when = datetime.strptime(parts[0], "%Y.%m.%d %H:%M")
+            except ValueError:
+                continue
+        ts = when.strftime("%Y-%m-%d %H:%M:%S")
+        try:
+            temp = float(parts[1])
+        except ValueError:
+            temp = None
+        if temp is not None:
+            readings.append([ts, retrieved, sensor, temp, ""])
+        if parts[2] and parts[2] != "set temp.":
+            evts.append([ts, retrieved, sensor, "instrument", parts[2], 1])
+    return readings, evts
 
 
 def classify(msg):
@@ -92,6 +138,13 @@ def main():
             continue
 
         for name in sorted(os.listdir(folder)):
+            # instrument exports (e.g. the Memmert incubator) sit alongside
+            # the Pico's own .txt logs
+            if name.lower().endswith(".csv"):
+                r, e = parse_instrument_csv(os.path.join(folder, name), retrieved)
+                tandh.extend(r)
+                events.extend(e)
+                continue
             if not name.endswith(".txt"):
                 continue
             channel = name[:-4]
