@@ -1,335 +1,119 @@
-# pico-incubator
+# pico-incubator — log archive
 
-Resources for in-house cell incubator controller based on Raspberry Pi Pico W. The device is programmed in RPi Pico W Micropython (latest version).
+Permanent record of the cell-culture incubator run by a Raspberry Pi Pico:
+light cycle, board restarts, and — for the first six months — temperature and
+humidity.
 
+This repository is now an **archive**. The firmware that produced these logs is
+no longer developed here; it was folded into `pico_firmware`, which unified all
+Pico-controlled devices in the lab. The original code is preserved two ways:
 
+- the **`legacy` branch**, which is this repository exactly as it was before the
+  reorganisation
+- the **`legacy/` folder** on `main`, for convenience
 
-The incubator's main purpose is to maintian light conditions and record temperature and humidity for the cell culture growth of *Chlamydomonas reinhardtii*. The apparatus has a main controller board and some attached peripherals.
-
-
-
-## Device Schematics
-
-```mermaid
----
-title: Device Schematics
----
-graph LR
-	mcu[Main-Controller<br>Pico W MCU] -.- relay -. "conects to" .-> Tube-Revolver
-	mcu --- Light-matrix
-	mcu --- buzzer
-	mcu --- Button1 -.and.- Button2
-	mcu --- tandh[Temp & Humidity Sensor]
-	mcu --- LCD-display
-	mcu --- Peltier-TC -.- TC-Fans
-	tandh -.feeds .- Peltier-TC
-	mcu --- circulation-fans
-	mcu --- photo-diodes
-	mcu -."wifi".- server[(Server)]
-	
-```
-
-
-
-```mermaid
----
-title: Power Regulation Schematics
----
-
-graph LR
-
-	GND((Common<br>GND)) --> 5V-2A
-	GND --> 5V-3.5A
-	GND --> 12V-5A
-	
-	5V-2A --power--> MCU
-  
-  5V-3.5A --power--> LightMatrix1 -.- LightMatrix2
-  5V-3.5A --power--> Circulation-fans
-  
-  12V-5A --powers--> PeltierTC
-  12V-5A --voltage-divider--> 5V-5A --> PeltierTC-fans
-	
-
-```
-
-## Devices
-
-| Circuit ID        | Description                                           | Picture                                                      |
-| ----------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
-| incubator_proto_1 | Single Incubator Control unit with single Lightmatrix | <img src="https://github.com/yatharthb97/yatharthb97.github.io/raw/04e7f099e768a1e84804a514f43867c4c8284db6/assets/images/pico_incubator.jpg?raw=true" style="zoom:25%; " /> |
-|                   |                                                       |                                                              |
-|                   |                                                       |                                                              |
-
-
-
-
-
-## Functional Analysis
-
-**Incubator Controller manages the following things:**
-
-1. Temperature and Humidity Monitor —  Sampling Rate: 1 Sample/min : Maintains averages per hour.
-2. Syncronisation of date and time using Wifi— Sync Rate: 1 Sample / 15 mins
-   + Server: www.ntp.ntsc.ac.cn (This would work better but no mechanism of using it: Potential Server:  "http://worldtimeapi.org/api/timezone/Europe/Lisbon")
-3. Synchronisation Light Controls: Fix R, G, B intensity and perform a sequence routine (day and night cycles)
-4. Actuation of tube-revolver using relay module (1 unit).
-5. LCD display for monitoring conditions.
+Note that the legacy code targets a **different circuit board** to the one in
+service now. See `legacy/README.md`.
 
 ---
 
-**Planned features that were not implemented:**
+## Figures
 
-1. Manual controls using Buttons and Potentiometers — buzzer based feedback.
+Regenerated automatically on every push. See *How it works* below.
 
-   [At this point, the potentiometer is not required and the port will be reused for something]
+### Temperature and humidity
 
-2. Fire safety mechanism: Read presence of Carbon-based gases and sound an alarm if a threat is detected.
-   [Sensor consumers high current and will heat the ambient environment.]
+![temperature and humidity](plots/temperature_humidity.png)
 
-3. Power backup using 5V power rails.
+### Light phase transitions
 
-   [Required Shottkey diodes, which are not in stock.]
+![actogram](plots/actogram.png)
 
+Two dense columns at 08:00 and 20:00 are the scheduled transitions. The scatter
+through the working day is the boot-time phase detection that runs whenever the
+circuit file is re-executed.
 
+### Board restarts
 
-## File Structure
+![restarts](plots/restarts.png)
 
-```mermaid
-graph LR
-	root("/") --base--> pico-firmware
-	root --config & id--> pinassignments.py -.- id.py -.- config.py -.- circadium.config
-	root --utility--> action.py -.- averager.py
-	root --sensors-actuators--> tempandhumidity.py -.- lights.py -.- lcd.py
-	root --logs--> out.txt -.- err-txt -.- in.txt
+### Archive coverage
+
+![coverage](plots/coverage.png)
+
+---
+
+## Adding logs
+
+1. Pull the `.txt` files off the Pico.
+2. Put them in a new folder named for the date you retrieved them, ISO format:
+   `logs/YYYY-MM-DD/`.
+3. Commit and push.
+
+The plots and CSVs regenerate themselves. Nothing to run locally.
+
+---
+
+## How it works
+
+`.github/workflows/archive.yml` runs on every push that touches `logs/` or
+`tools/`:
+
+1. `tools/parse_logs.py` — walks `logs/*/`, parses every record, writes
+   `tandh.csv` and `events.csv`
+2. `tools/make_plots.py` — writes the four PNGs into `plots/`
+3. commits the regenerated files back to the branch
+
+Both scripts run from the repository root and take no arguments. `parse_logs.py`
+is standard library only; `make_plots.py` needs matplotlib.
+
+---
+
+## The data
+
+| | |
+|---|---|
+| Retrievals | 17, from 2023-08-26 to 2026-08-23 |
+| Temperature / humidity | 82,781 readings, 2023-08-19 → 2024-02-12 |
+| Event records | ~29,000 |
+| Days with event data | 989 |
+| Days with T/H data | 139 |
+
+### Log format
+
+Every file is written by the Pico's `Logger`, one record per line:
+
+```
+<channel>, (Y, M, D, weekday, hh, mm, ss, subsec), <message>
 ```
 
-
-
-## List of Timers
-
-1. `dt_sync_tim` : Date-time synchronisation of Real Time Clock (RTC).
-2. `buzzer_safety_tim` : Turns off the buzzer every 5 minutes to protect against accidental crashes while the buzzer is on.
-3. `sensor_act_timer` : 
-   1. `tanh_tim` : Samples the temperature and humidity at regular intervals.
-   2. `lcd_update1_tim`:  Pushes the next update on the LCD.
-
-4. `circadium_scheduler`:  Toggles the ligthts based on circadium rhythm.
-
-
-
-## List of Actions
-
-1. Switch-1 toggles relay.
- 2. Switch-2 toggles LCD updates.
-
-## List of External Peripherals
-
-1. UA7805C 5V 1.5A Linear Voltage Regulator connected to 9V independent powersupply.
-2. Generic Passive Buzzer
-3. Generic One channel Relay Switch
-4. 2 Buttons/Switches
-5. DFRobot DH22 Temperature and Humidity Sensor : https://www.dfrobot.com/product-1102.html
-6. 21 Neopixel RGB LEDs
-7. Waveshare 0.96" color LCD with ST7735S driver: https://www.waveshare.com/wiki/Pico-LCD-0.96
-
-## Control Flow
-
-1. Main Routine on Processor1:
-
-```mermaid
-graph LR
-	start((Start)) --> core0[[on processor1]] --> set-resources --> set-actions --> set-timers --> Free-REPL  
-	set-resources --> core1[[on processor2]] --> Periodic-Service-5 -.- process-requests
-	process-requests -.poll.-> process-requests
-	Periodic-Service-5 -.callbacks.-> Periodic-Service-5
-```
-
-2. Timer 0: Periodic Service I : **Circadium Scheduler 1**
-
-   Look at the section: Illumination/Circadium Scheduler
-
-3. Timer 1: Periodic Service II: **Circadium Scheduler 2**
-
-   Look at the section: Illumination/Circadium Scheduler
-
-4. Timer 2: Periodic Service III : **Safety and Garbage Collection**
-
-   ```mermaid
-   flowchart LR
-   	Timer(Every<br>config.config.safety_callback_min) --> buzzer("buzzer.off()") --> gc("gc.collect()")
-   ```
-
-5. Timer 3: Periodic Service IV: **Set-Temperature and Humidity Averagers**
-
-```mermaid
-graph LR
-	PT((Periodic<br>Timer)) --> read-sensor --push--> avg["Averager(avg)"] --- read("avg.read()")
-	avg --"&"--> save-to-file
-	read -.push.-> update-display
-```
-
-6. Processor2 : Periodic Service V: **Wifi-reconnection, regular machine reboots, and Datetime synchronisations.**
-
-   `ntptime` module throws `ETIMEDOUT` and `OverflowError` (inspected by multiple calls). This might be the cause of the problem since an exception occurs in an interrupt handler and results in a memory leak. Upon multiple concurrent calls, an Overflow error was detected which is scarry. Hence, the datetime sync periodic process has been moved to the 2nd processor, which has more resources to handle it. 
-
-   ```mermaid
-   graph LR
-   processor2 --> wifistatus1
-   processor2 --> periodic-resets
-   processor2 --> reg_dt_sync
-   main((main.py)) -.starts.- processor2
-   STOP{stop_processor2 <br>is true} -.halts.-> processor2
-   	wifistatus1("Wifi not connected") --> wifireconnect("wifi.connect()") --> counter{counter < 5} --true - with-delay--> wifireconnect
-   	counter --wifi-connected --> dt_sync("dt_sync()")
-   	counter --false--> reset("machine.reset()")
-   	
-   	periodic-resets --> reset_counter{"reset-counter <br> > config.reg_machine<br>_reset_min"}
-   	reset_counter --true--> reset("machine.reset()")
-   	reg_dt_sync --try--> dt_sync2("dt_sync()") --> gccollect("gc.collect()")
-   ```
-
-   The Datetime Sync Service is described:
-
-   ```mermaid
-   graph LR
-   	RTim1((dt_sync)) --> ureq("ntptime.settime()") --> offset-for-timezone ---> urtc("Update-rtc")
-   ```
-
-+ Interrupt Routine with Actions (Switch 1 and Switch 2)  [DISABLED]:
-
-```mermaid
-graph LR
-	Button2((On-button-press)) --> ISR --debouce--> toggle-relay("toggle-relay-state   or<br>revolver toggle on-off   or<br>lights toggle on-off")
-```
-
-+ Fire Alarm Triggers [feature not implemented]
-
-  + The Gas Sensor must be warmed up for 5-10 minutes before it can be read.
-
-  + If the Gas Sensor has remained unused for a long time, it must be preheated for 24 hours atleast.
-
-  + The sensor consumes about ~800 mW of power.
-
-
-```mermaid
-graph LR
-	start(("Periodic<br>Timer")) --> Gas{Gas Sensor} --HIGH--> Send-Alerts
-	Send-Alerts --> buzz("buzz(100)")
-	Gas --LOW--> start
-```
-
-
-
-+ Power Rail Detection [feature not implemented]
-
-​	No clue as of now on how to do it.
-
-```mermaid
-graph LR
-	Detect{Detect<br>Power<br>Rail} --> detection_mechanism{{detection mechanism}}--> buzz("Buzzer feedback")
-	
-```
-
-+ Watchdog timer to correct for crashes [feature not implemented]
-
-```python
-from machine import WDT
-wdt = WDT(timeout=2000)  # enable it with a timeout of 2s
-wdt.feed()
-```
-
-On rp2040 devices, the maximum timeout is 8388 ms.  So the device would reset every 8 seconds. However, the minimum wifi connection time is around 3 seconds. **This would not work.**
-
-## Illumination/Circadium Scheduler
-
-### Day-Night Cycles
-
-The actuation of day night cycles requires the complete description of the following entities:
-
-1. (day_len_hours, night_len_hours, start_time, day_start)
-2. (day_start,  night_start) : Obviously the easiest.
-
-#### [TODO] mode == "long"
-
-Two callbacks per cycle by precision calculation of time difference between phases. Not solved.
-
-#### mode == "short"
-
-The current time (**now**)  is compared to the schedules time(s), and the change of lights is executed if there is a match. This is essentially a polling approach.
-
-**<u>Correctly timing the change of lights with *minute* precision is a complex problem because:</u>**
-
-1. The time is checked every 30-45 seconds (accurately described by the `config.cs_callback_s`. Hence, the comparision is always slighly mismatched.
-2. The comparision must keep track of difference in dates.
-3. The comparision must be debounced with last callback time to make sure that non-absolute differences (difference of +1 and -1), both don't lead to execution.
-4. The lights must be set to the correct state when the device is booted.
-
-
-
-**<u>A change is allowed when the following conditions are wholly satisfied:</u>**
-
-1. The difference of time (now and set time) in seconds must be less-than or equal to 2*`config.cs_callback_s.
-2. The last actuation of that *phase* (day or night phase) must debounce the next for atleast 5 minutes. (not conserved on reboot)
-3. There must be enough cycles remaining for the execution. Each phases decreases the `remaining_cycle_count` by 0.5.
-   [**!!! Requirement allows `cycles` parameter to be a float.**]
-
-### [TODO] Multiple CircadiumScheduler objects
-
-
-
-Proto-code for Daisy-chaining of multiple C-Scheduler objects to contruct a complex synchronisation cycle.
-
-```python
-# Schedule Parser
-class ScheduleParser:
-  
-  def __init__(self, filename):
-    
-    #Some file that contains Schedule information
-    
-    lines = file.readlines()
-    lines = [line.replace(" ", "") for line in lines]
-    lines = [line.split(",") for line in lines]
-    				# r             g             b             t_sec
-    schedules = \
-    [Schedule(int(line[0]), int(line[1]), int(line[2]), float(line[3])) for line in lines]
-    return schedules
-```
-
-
-
-### LED Matrix — Current Requirement Analysis
-
-+ Source: https://learn.adafruit.com/adafruit-neopixel-uberguide/powering-neopixels
-
-+ LM7805C Linear Voltage Regulator: 
-
-+  Adding a 300 to 500 Ohm resistor between your microcontroller's data pin and the data input on the first NeoPixel can help prevent voltage spikes that might otherwise damage your first pixel. Please add one between your micro and NeoPixels!
-
-+ Before connecting a NeoPixel strip to ANY source of power, a large capacitor (500–1000** **µ****F at 6.3 Volts or higher) across the + and – terminals provides a small power reservoir for abrupt changes in brightness that the power source might not otherwise handle — a common source of NeoPixel “glitching.”
-
-+ To estimate power supply needs, multiply the number of pixels by 20, then divide the result by 1,000 for the “rule of thumb” power supply rating in Amps. Or use 60 (instead of 20) if you want to guarantee an absolute margin of safety for all situations. For example:
-
-  60 NeoPixels × 20 mA ÷ 1,000 = 1.2 Amps minimum
-  60 NeoPixels × 60 mA ÷ 1,000 = 3.6 Amps maximum
-
-+ **For Our Case**: 21 LEDs:
-
-  + 21 × 20mA / 1000  = 410/1000 = 0.41 A
-  + 21 × 60mA / 1000 = 1260/1000 = 1.26A
-
-+ Rating for LM7805C is 5V and 1.5A maximum. Therefore, it is being used **around** its full capacity. The Regulator has thermal protection shutdown.
-
-+ **How to detect thermal shutdowns? : Use a Photosensor module with an IRQ on a minimum threshold raising an error.** For this to be reliable, the box needs to be closed-shut with magnets. Port for Potentiometer is free and is connected to an Analog Read Pin (ADC).
-
-+ Add-on Current Source: To add additional LED-matrix, a seperate current source with its own LM7805C Linear Voltage Regulator should be added with seperate Neopixel control pins. The same AC/DC converter power source with enough current input can be used.
-
-+ **Update**:  The LM7805C IC was heating up a lot, hence it was disconnected. Power is being rerouted using a mod-board and using a Raspberry Pi 5V-3A USB-C power supply.
-
-
-
-
-
-
-
+A bare channel name on its own line is the header written when the logger is
+imported — that is, **one board restart**. All four channels write a header at
+boot, so counting restarts across every channel over-counts about fourfold;
+`make_plots.py` counts only `out`.
+
+| file | content |
+|---|---|
+| `out.txt` | boots, scheduler setup, day/night transitions |
+| `err.txt` | NTP clock-sync records |
+| `tandh1.txt`, `tandh2.txt` | `{'humidity': 44, 'temp': 23}` |
+| `in.txt`, `dtsync.txt` | headers only in practice |
+
+### Two things that look like bugs but are not
+
+**Temperature and humidity stop in February 2024.** Not data loss — the new
+incubator arrived, with its own environmental control, and the sensor was no
+longer needed. Everything after that date is light cycle and uptime only.
+
+**Some records are stamped 2021-01-01.** The MicroPython RTC default. It means
+the NTP / `dtsync` clock sync had not succeeded for that boot. There was no
+watchdog on this hardware, so these are sync failures and nothing more. They are
+kept in `events.csv` with `clock_ok=0`, and excluded from `tandh.csv`, where an
+unusable timestamp makes the reading worthless.
+
+### Retrieval windows do not overlap
+
+Each pull captured a distinct window — roughly a week for the 2023 retrievals —
+rather than a cumulative file. All 82,781 T/H readings are unique. The plots
+break the line across gaps rather than interpolating, so what you see is what
+was actually recorded.
