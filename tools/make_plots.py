@@ -134,26 +134,43 @@ def plot_actogram(events):
 
 
 def plot_restarts(events):
-    """Restarts per week. Count only the 'out' channel - every channel writes
-    a header at boot, so counting all of them inflates the figure ~4x."""
-    weeks = Counter()
+    """Restarts per month, dated from the first record of each boot.
+
+    Count only the 'out' channel - every channel writes a header at boot, so
+    counting all of them inflates the figure about fourfold. The folder name is
+    only the retrieval date and is never used here.
+    """
+    months = Counter()
+    undated = 0
     for r in events:
         if r["kind"] != "restart_marker" or r["channel"] != "out":
             continue
-        try:
-            d = datetime.strptime(r["retrieved"], "%Y-%m-%d")
-        except ValueError:
+        if r["clock_ok"] != "1" or not r["timestamp"]:
+            undated += 1
             continue
-        weeks[d - timedelta(days=d.weekday())] += 1
-    if not weeks:
+        try:
+            d = datetime.strptime(r["timestamp"], FMT)
+        except ValueError:
+            undated += 1
+            continue
+        months[datetime(d.year, d.month, 1)] += 1
+    if not months:
         return
 
-    xs = sorted(weeks)
+    lo, hi = min(months), max(months)
+    xs, cur = [], lo
+    while cur <= hi:                      # keep empty months visible
+        xs.append(cur)
+        cur = datetime(cur.year + (cur.month == 12),
+                       cur.month % 12 + 1, 1)
+
     fig, ax = plt.subplots(figsize=(12, 4))
-    ax.bar(xs, [weeks[x] for x in xs], width=5, color=NIGHT_C, linewidth=0)
+    ax.bar(xs, [months.get(x, 0) for x in xs], width=22,
+           color=NIGHT_C, linewidth=0)
     ax.set_ylabel("restarts", color=INK, fontsize=10)
     ax.set_title(
-        f"Board restarts, by retrieval date — {sum(weeks.values()):,} total",
+        f"Board restarts per month — {sum(months.values()):,} dated"
+        + (f", {undated} undatable (clock never synced)" if undated else ""),
         color=INK, fontsize=12, loc="left", pad=12,
     )
     style(ax)

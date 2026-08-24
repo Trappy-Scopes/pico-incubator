@@ -37,6 +37,12 @@ circuit file is re-executed.
 
 ![restarts](plots/restarts.png)
 
+A restart is a bare channel-name line — the header the Logger writes on import.
+It carries no timestamp, so each one is dated from the first record of that
+boot. Boots whose clock never synced cannot be dated and are excluded from the
+bars but counted in the title. The folder name is only the retrieval date and is
+never used as a time axis.
+
 ### Archive coverage
 
 ![coverage](plots/coverage.png)
